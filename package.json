@@ -1,0 +1,9 @@
+{
+  "name": "Pocket-Template-Project",
+  "version": "1.0.0",
+  "description": "Template porte-folio sous material-ui par TonyLaPoche",
+  "main": "index.js",
+  "repository": "git@github.com:TonyLaPoche/Pocket-Template-Project.git",
+  "author": "tonylapoche <terrade.antoine.pro@gmail.com>",
+  "license": "MIT"
+}
