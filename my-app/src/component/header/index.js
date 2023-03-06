@@ -6,17 +6,17 @@ const navElements = [
   {
     id:1,
     name:"présentation",
-    link:"presentation" 
+    path:"#presentation" 
   },
   {
     id:2,
     name:"Mes créations",
-    link:"projets" 
+    path:"#projets" 
   },
   {
     id:3,
     name:"Mes réseaux",
-    link:"contact" 
+    path:"#contact" 
   },
 ]
 

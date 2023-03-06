@@ -1,37 +1,32 @@
-import React, { useState, useEffect } from "react";
-import ReactDOM from "react-dom";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import useWindowSize from "../../../hooks";
+import { HashLink } from 'react-router-hash-link';
 
-export default function SideNav(props) {
+export default function SideNav({...props}) {
   const [slider, setSlider] = useState(false);
   const size = useWindowSize();
-  const fakeProps = [
-    {
-      name: "Home",
-      path: "/"
-    },
-    {
-      name: "About",
-      path: "/about"
-    }
-  ];
+
+  console.log(props);
+console.log('url courante : ',window.location.hash);
+const { location } = window
+  const { navElements } = props
+
   return (
     <>
-      <nav className="light-blue">
-        <a
-          href="#test"
-          className="sidenav-trigger"
+      <nav className="nav-wrapper light-blue">
+        <p>Porte folio du Tony</p>
+        <div
+          className="btn-floating btn-large waves-effect waves-light red"  
           onClick={() => setSlider(s => !s)}
         >
           <i className="material-icons">menu</i>
-        </a>
+        </div>
       </nav>
       <div
         className="sidenav-overlay"
         onClick={() => setSlider(s => !s)}
         style={{
-          display: slider && size.width < 980 ? "block" : "none",
+          display: slider && size.width < 600 ? "block" : "none",
           opacity: "1"
         }}
       />
@@ -39,32 +34,26 @@ export default function SideNav(props) {
         id="slide-out"
         className="sidenav"
         style={{
-          transform: slider || size.width > 980 ? "translateX(0%)" : "",
+          transform: slider || size.width > 600 ? "translateX(0%)" : "",
           transitionProperty: "transform",
-          transitionDuration: ".25s"
+          transitionDuration: ".75s"
         }}
       >
         <li>
-          <h4>title h4</h4>
+          <img src="https://fakeimg.pl/100/" alt="fakeimg" />
+          <h4>Terrade Antoine</h4>
         </li>
-        {fakeProps.map(elt => (
-          <li onClick={() => setSlider(s => !s)}>
-            <Link className="waves-effect" to={elt.path}>
+        {navElements.map(elt => (
+          <li key={elt.name} onClick={() => setSlider(s => !s)}>
+            <HashLink 
+              key={elt.id}
+              className={`${location.hash}` === elt.path ? "waves-effect red-text" : "waves-effect"}
+              to={elt.path}
+            >
               {elt.name}
-            </Link>
+            </HashLink>
           </li>
         ))}
-        <li>
-          <div className="divider" />
-        </li>
-        <li>
-          <a className="subheader">Subheader</a>
-        </li>
-        <li>
-          <a className="waves-effect" href="#!">
-            Third Link With Waves
-          </a>
-        </li>
       </ul>
     </>
   );
