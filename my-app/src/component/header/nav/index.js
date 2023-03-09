@@ -24,8 +24,7 @@ export default function SideNav({ ...props }) {
     return location.pathname === `/${link}` ? 'red-text' : 'waves-effect ';
   }
 
-
-
+  // TODO - A déplacé
   const navGenerator = () => {
     const NavElt = nav.map((elt) => {
       if (elt.name === "présentation" || elt.name === "mes réseaux" || elt.name === "contact") {
@@ -57,7 +56,6 @@ export default function SideNav({ ...props }) {
                 {
                   subSlider ? 'expand_more' :'expand_less'
                 }
-                
                 </i>
               </HashLink>
               
