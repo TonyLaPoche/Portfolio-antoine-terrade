@@ -1,3 +1,8 @@
+import profilPicture from '../assets/SVG/profil.jpeg';
+import logoOclock from '../assets/SVG/iconOclock.svg';
+import think from '../assets/SVG/think.svg';
+import target from '../assets/SVG/target_goal_icon_152113.svg';
+
 export const fakeProps = [
   {
     id: 'title-1',
@@ -11,30 +16,49 @@ export const fakeProps = [
       {
         id: 'presentation-content-1',
         title: 'Qui suis-je ?',
-        description:
-          "Tony 26ans bientôt 27 ! Pas célibataire mais tout de même libre comme l'air",
-        picture: 'https://fakeimg.pl/200/',
+        description:[
+          "Antoine Terrade, jeune développeur en devenir.",
+          "26 ans bientôt 27, née en 1996 à Valognes mais désormais situé dans le 74 (Haute-Savoie) en périphérie de la Suisse côté France.",
+        ],
+        picture: profilPicture,
+        position: 'left',
       },
       {
         id: 'presentation-content-2',
         title: 'Mon parcours',
-        description:
-          'Cuisinier à magazinier puis vendeur de cigarette electronique pour finir développeur web !',
-        picture: 'https://fakeimg.pl/200/',
+        description:[
+          "Mordue d'informatique de puis tout jeune, il m'aura fallut du temps avant de trouver ma voie.",
+          "J'ai directement cherché à travaillé dès que possible dès mon tout jeune age en tant que cuisinier puis après un malencontreux accident j'ai travailler quelque temps en temps que magazinier puis responsable de rayon et j'ai été débouché par un magasin de cigarette electronique (ce qui à été un réel tournant dans ma vie).",
+          "J'y suis resté 7 longue années ou j'ai combattue à bras le corps ma timidité puis au file du temps j'eu suffisament de responsibilité dans l'entreprise que j'ai commencé par être responsable du site internet de l'entreprise (commande, gestion interface avec prestashop, campagne de newsletter) et c'est la que le déclic est apparue.",
+          "J'aime le développement Web à tel point que j'ai décidé de toutes abandonnée pour me convertir à 100% pour cette toute nouvelle passion ",
+          "J'ai alors fait un bootcamp de 6mois afin de voir si toutes les bases que j'avais accumulé en autodidacte était conforme au marché du travaille. C'était la période de ma vie la plus enrichissante que ça soit en terme d'apprentissage ou de rencontre",
+          "Et me voiçi développeur Web Junior prêt à en découdre !"
+        ],
+        picture: logoOclock,
+        position: 'right',
       },
       {
         id: 'presentation-content-3',
         title: "Ma vision de l'avenir",
-        description:
-          'Devenir un développeur respecter dans la profession et ayant accomplis toutes sorte de projet dans plein de techno différente',
-        picture: 'https://fakeimg.pl/200/',
+        description: [
+          "Je souhaiterais devenir un développeur Web accomplit.  ",
+          "C'est à dire une personne capable de proposé des solution inovante et ludique à toutes problématique qui touche au application du web. ",
+          "J'aime transmettre, échanger, apprendre et ce métier et un puit sans fond dans ces domaines et je m'y sent chez moi.",
+          "Une phrase que j'aime beaucoup dit que quand le travaille est une passion ce n'est plus un travail mais une évolution et bien je m'ys retrouve totalement je souhaite évoluer sans cesses",
+        ],
+        picture: think,
+        position: 'left',
       },
       {
         id: 'presentation-content-4',
         title: 'Objectif',
-        description:
-          'Continuer ma monté en compétence seul ou en entreprise afin de devenir suffisament performant afin de rendre mes projet perso lucratif',
-        picture: 'https://fakeimg.pl/200/',
+        description: [
+          "Concernant mes objectifs professionnel actuel sont simple.",
+          "Trouver une entreprise qui accepterais de me mentoré afin de continuer à m'élever dans le développement Web.",
+          "Et pourquoi pas un jour allez sur de l'applicatif mobile afin de peut être réalisé un rêves d'enfance crée un jeu en ligne ",
+        ],
+        picture: target,
+        position: 'right',
       },
     ],
   },
@@ -46,6 +70,7 @@ export const fakeProps = [
       {
         id: 'presentation-projet-1',
         title: 'Ce porte-folio déjà !',
+        alt: "portfolio",
         techno: ['react', 'scss', 'html', 'node.js'],
         link: 'url-repos-1',
         demo: 'url-demo-1',
@@ -57,6 +82,7 @@ export const fakeProps = [
       {
         id: 'presentation-projet-2',
         title: 'Jeu de la vie',
+        alt: "portfolio",
         techno: ['react', 'css', 'html', 'rédux'],
         link: 'url-repos-2',
         demo: 'url-repos-2',

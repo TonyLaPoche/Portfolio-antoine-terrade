@@ -64,14 +64,11 @@ const MonReseaux = fakeReseauxProps.map((elt, index) => (
   </Col>
 ));
 
-
 // == Composant
 const Reseaux = () => {
   return (
     <section id="mes-reseaux" className="container center">
-      <Row>
-        {MonReseaux}
-      </Row>
+      <Row>{MonReseaux}</Row>
     </section>
   );
 };

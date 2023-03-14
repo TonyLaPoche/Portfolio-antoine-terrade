@@ -1,46 +1,34 @@
-// == Import
+import React from 'react';
+import { Card, Col, Row } from 'react-materialize';
 import PropTypes from 'prop-types';
 
-// == Composant
-function PresentationAera({ id, title, description, picture }) {
+function PresentationAera({ id, title, description, picture, position }) {
   return (
-    <div className="section" key={id + '-container-' + title}>
-      <h4 key={id + '-title-' + title} className="center">
-        {title}
-      </h4>
-      <div
-        className="col s12 m8 offset-m2 l6 offset-l3"
-        key={id + '-container-' + title}
-      >
-        <div
-          className="card-panel grey lighten-5 z-depth-1"
-          key={id + '-card-' + title}
-        >
-          <div className="row valign-wrapper" key={id + '-wrapper-' + title}>
-            <div className="col s5 center" key={id + '-div-img-' + title}>
+    <Card key={id + '-container-' + title} >
+        <Row key={id + '-row-' + title}>
+          <Col s={12} key={id + '-col-' + title} className="center">
+            <h3 className="center" key={id + '-cardTitle-' + title}>
+              {title}
+            </h3>
+          </Col>
+          <Col s={12} m={12} key={id + '-col1-' + title}>
+            <div key={id + '-description-' + title}>
               <img
                 src={picture}
-                alt=""
-                className="circle responsive-img"
-                key={id + '-img-' + title}
+                alt="card"
+                className={id === "presentation-content-1" ? "circle responsive-img" :  "responsive-img" }
+                style={{ float: position, margin:"1rem",width:"30%" }}
+                key={id + '-picture-' + title}
               />
+              {description.map(elt => (
+               
+               <p key={elt} style={{marginBottom:"1rem"}}>{elt} </p>
+               
+              ))}
             </div>
-            <div className="col s7" key={id + '-description-' + title}>
-              <span
-                className="black-text"
-                key={id + '-description-span' + title}
-              >
-                {description}
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Corrupti nulla reprehenderit reiciendis, dolorum voluptatem
-                quidem aspernatur nostrum vel ipsam, quam est. Incidunt, ab
-                expedita.
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+          </Col>
+        </Row>
+    </Card>
   );
 }
 
@@ -51,5 +39,4 @@ PresentationAera.propTypes = {
   picture: PropTypes.string,
 };
 
-// == Export
 export default PresentationAera;

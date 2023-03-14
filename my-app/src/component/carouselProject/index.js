@@ -1,9 +1,14 @@
 // == Import
+import React from 'react';
 import { Slider, Slide, Caption } from 'react-materialize';
+import PropTypes from 'prop-types';
+import SlideM from './Slide';
 
 // == Composant
 
-export const SliderM = () => {
+export const SliderM = ({ content }) => {
+  console.log('ici', content)
+
   return (
     <Slider
       fullscreen={false}
@@ -18,37 +23,28 @@ export const SliderM = () => {
         margin: '0 auto',
       }}
     >
-      <Slide
-        image={
-          <img
-            alt=""
-            src="https://picsum.photos/300/300?image=0"
-            className="responsive-img"
-          />
-        }
-      >
-        <Caption placement="center">
-          <h3>This is our big Tagline!</h3>
-        </Caption>
-      </Slide>
-      <Slide image={<img alt="" src="https://picsum.photos/350/250?image=1" />}>
-        <Caption placement="left">
-          <h4>Nom du projet 1</h4>
-        </Caption>
-      </Slide>
-      <Slide image={<img alt="" src="https://picsum.photos/250/250?image=2" />}>
-        <Caption placement="right">
-          <h4>Nom du projet 2</h4>
-        </Caption>
-      </Slide>
-      <Slide image={<img alt="" src="https://picsum.photos/250/250?image=3" />}>
-        <Caption placement="center">
-          <h4>Nom du projet 3</h4>
-        </Caption>
-      </Slide>
+      {content.map(project => (
+      <SlideM project={project} />
+      ))}
     </Slider>
   );
 };
 
+
+SliderM.propTypes = {
+  content: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string.isRequired,
+        title: PropTypes.string.isRequired,
+        alt: PropTypes.string.isRequired,
+        techno: PropTypes.array.isRequired,
+        link: PropTypes.string.isRequired,
+        demo: PropTypes.string.isRequired,
+        etat: PropTypes.string.isRequired,
+        description: PropTypes.string.isRequired,
+        picture: PropTypes.string.isRequired,
+      })
+  )
+}
 // == Export
 export default SliderM;
