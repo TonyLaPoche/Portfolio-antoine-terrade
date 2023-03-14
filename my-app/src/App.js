@@ -10,12 +10,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="url-repos-2" element={<p>page du repos 2</p>} />
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
 }
-
 
 export default App;

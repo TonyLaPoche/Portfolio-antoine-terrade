@@ -1,6 +1,5 @@
 // == Import
-import { useState } from "react";
-import { Slider, Slide, Caption, Carousel } from "react-materialize";
+import { Slider, Slide, Caption } from 'react-materialize';
 
 // == Composant
 
@@ -15,8 +14,8 @@ export const SliderM = () => {
         interval: 6000,
       }}
       style={{
-        maxWidth: "60vw",
-        margin: "0 auto",
+        maxWidth: '60vw',
+        margin: '0 auto',
       }}
     >
       <Slide
@@ -50,7 +49,6 @@ export const SliderM = () => {
     </Slider>
   );
 };
-
 
 // == Export
 export default SliderM;
