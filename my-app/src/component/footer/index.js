@@ -1,5 +1,9 @@
 // == Import
+// TODO - liens utiles , CV , Page Site-map
+
+import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
+import scrollWithOffset from '../../utilities/ScollWithOfset';
 
 // == Composant
 const Footer = () => {
@@ -17,45 +21,47 @@ const Footer = () => {
             </p>
           </div>
           <div className="col l4 offset-l2 s12">
-            <h5 className="white-text">Links</h5>
+            <h5 className="white-text">Lien utiles</h5>
             <ul>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
-                  Site-map
-                </a>
+                <Link className="grey-text text-lighten-3" to="/site-map">
+                  Site map
+                </Link>
               </li>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
+                <HashLink
+                  className="grey-text text-lighten-3"
+                  smooth
+                  to="/#projets"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
                   Projets
-                </a>
+                </HashLink>
               </li>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
+                <Link
+                  className="grey-text text-lighten-3"
+                  to="https://github.com/TonyLaPoche"
+                >
                   Github
-                </a>
+                </Link>
               </li>
               <li>
-                <a className="grey-text text-lighten-3" href="#!">
+                <HashLink
+                  className="grey-text text-lighten-3"
+                  smooth
+                  to="/#projets"
+                  scroll={(el) => scrollWithOffset(el)}
+                >
                   Contact
-                </a>
+                </HashLink>
               </li>
             </ul>
           </div>
         </div>
       </div>
       <div className="footer-copyright">
-        <div className="container">
-          © 2023 Terrade Antoine
-          <HashLink
-            className="btn-floating btn-small blue darken-2 right pulse"
-            style={{ marginLeft: '15px' }}
-            smooth
-            to="/#root"
-          >
-            <i className="material-icons">arrow_upward</i>
-            {/* // Todo géré haslink de l'arrow qui remonte en haut de page */}
-          </HashLink>
-        </div>
+        <div className="container">© 2023 Terrade Antoine</div>
       </div>
     </footer>
   );

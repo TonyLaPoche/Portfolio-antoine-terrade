@@ -1,0 +1,13 @@
+@use '../../utilities/responsive';
+
+
+.progress-bar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: #ffffff;
+  transform-origin: 0%;
+	z-index: 999;
+}

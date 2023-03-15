@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import useWindowSize from '../../../hooks';
 import { HashLink } from 'react-router-hash-link';
-
-import fakeProps from '../../../data/fake';
+import { isMobile } from 'react-device-detect';
 import { Link, useLocation } from 'react-router-dom';
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai';
+import { BsDiscord } from 'react-icons/bs';
 
-export default function SideNav({ ...props }) {
+import scrollWithOffset from '../../../utilities/ScollWithOfset';
+import useWindowSize from '../../../hooks';
+import fakeProps from '../../../data/fake';
+const SideNav = ({ ...props }) => {
   const [slider, setSlider] = useState(false);
   const [subSlider, setSubSlider] = useState(false);
   const size = useWindowSize();
@@ -14,23 +17,12 @@ export default function SideNav({ ...props }) {
   // const { navElements } = props
 
   const nav = fakeProps.slice(1);
-  console.groupCollapsed('nav');
-  console.log(nav);
-  console.groupEnd();
-  // console.log(window);
-
-  // console.log(window);
-
+  // console.groupCollapsed('nav');
+  // console.log(nav);
+  // console.groupEnd();
   // TODO - A déplacé
   const isActiveLink = (link) => {
     return location.pathname === `/${link}` ? 'red-text' : 'waves-effect ';
-  };
-
-  // TODO - A déplacé
-  const scrollWithOffset = (el) => {
-    const yCoordinate = el.getBoundingClientRect().top + window.pageYOffset;
-    const yOffset = -80;
-    window.scrollTo({ top: yCoordinate + yOffset, behavior: 'smooth' });
   };
 
   // TODO - A déplacé
@@ -83,7 +75,6 @@ export default function SideNav({ ...props }) {
                     {subSlider ? 'expand_more' : 'expand_less'}
                   </i>
                 </HashLink>
-
                 <div
                   key={elt.name + '-collapsible-body'}
                   className="collapsible-body"
@@ -96,7 +87,7 @@ export default function SideNav({ ...props }) {
                       <li key={'li' + content.id}>
                         <Link
                           key={content.id + content.title}
-                          to={content.link}
+                          to={'/project/' + content.id}
                           style={{ marginLeft: '15px', fontSize: '1rem' }}
                           className={`${isActiveLink(
                             content.link,
@@ -128,8 +119,6 @@ export default function SideNav({ ...props }) {
 
   const elementsJSX = navGenerator();
 
-  console.log();
-
   // console.groupCollapsed("présentation");
   // console.log(fakeProps[1]);
   // console.groupEnd();
@@ -151,9 +140,50 @@ export default function SideNav({ ...props }) {
       <div className="navbar-fixed">
         <nav>
           <div className="nav-wrapper light-blue">
-            <a className="brand-logo center" href="/#root">
+            <a
+              className="brand-logo center"
+              style={{ width: '100%' }}
+              href="/#root"
+            >
               {fakeProps[0].titre}
             </a>
+            <div
+              style={{
+                position: 'absolute',
+                right: 10,
+                display: isMobile ? 'none' : 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                alignItems: 'center',
+                width: 200,
+                height: '100%',
+              }}
+            >
+              <a
+                style={{ display: 'flex', alignItems: 'center' }}
+                href="https://github.com/TonyLaPoche"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillGithub style={{ height: 30, width: 30 }} />
+              </a>
+              <a
+                style={{ display: 'flex', alignItems: 'center' }}
+                href="https://www.linkedin.com/in/antoine-terrade-web/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <AiFillLinkedin style={{ height: 30, width: 30 }} />
+              </a>
+              <a
+                style={{ display: 'flex', alignItems: 'center' }}
+                href="https://discord.gg/zkeCnAsByF"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <BsDiscord style={{ height: 30, width: 30 }} />
+              </a>
+            </div>
             <div
               className="btn-floating btn-small blue darken-2 center-left pulse"
               style={{ marginLeft: '15px' }}
@@ -227,4 +257,6 @@ export default function SideNav({ ...props }) {
       </ul>
     </>
   );
-}
+};
+
+export default SideNav;
