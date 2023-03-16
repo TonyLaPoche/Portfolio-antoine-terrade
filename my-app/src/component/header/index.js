@@ -24,7 +24,7 @@ const navElements = [
 // == Composant
 function Header() {
   return (
-    <header>
+    <header className='z-20'>
       {/* <Nav navElements={navElements} /> */}
       <Nav2 />
     </header>
