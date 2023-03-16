@@ -11,29 +11,30 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
         position === 'left' ? 'bg-white' : 'bg-blue-500'
       } ${position === 'right' ? 'flex-row' : 'flex-row-reverse'}`}
     >
-      <div className="md:w-full p-4 md:p-none">
+      <div className="md:w-full p-4 md:p-none ">
         <h3
           className="text-4xl text-left text-gray-400 font-bold "
           key={id + '-cardTitle-' + title}
         >
           Antoine Terrade
         </h3>
-        <h1 className="text-[60px] font-bold">Développeur Web</h1>
-        <div className="flex justify-evenly md:justify-start">
-          <div className="p-2 md:mr-2 border-2 border-cyan-700 bg-cyan-500 rounded-full">
+        <h1 className="text-[60px] font-bold mb-4">Développeur Web</h1>
+        <div className="flex gap-4 justify-start">
+          <div className="p-2  border-2 border-cyan-500 bg-white text-cyan-500 rounded-full">
             React
           </div>
-          <div className="p-2 md:mr-2 border-2 border-yellow-500 bg-yellow-300 rounded-full">
+          <div className="p-2  border-2 border-yellow-500 bg-white text-yellow-500 text-center rounded-full">
             Javascript
           </div>
-          <div className="p-2 md:mr-2 border-2 border-green-800 bg-green-600 rounded-full">
+          <div className="p-2  border-2 border-green-500 bg-white text-green-500 rounded-full">
             Node.js
           </div>
-          <div className="p-2 md:mr-2 border-2 border-blue-400 bg-blue-200 rounded-full">
+          <div className="p-2  border-2 border-blue-500 bg-white text-blue-500 rounded-full">
             GitHub
           </div>
         </div>
-        <p className="my-5">
+
+        <p className="my-5 mb-8">
           <AutoTyping
             active // <boolean>
             textRef="Ambitieux, Créatif, Curieux" // <string>
@@ -48,7 +49,7 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
           />
         </p>
         <HashLink
-          className="px-5 py-4 rounded-lg text-center bg-blue-500  focus:bg-blue-500 border-2 border-solid border-blue-500 text-white font-bold"
+          className="px-5 py-4 mt-4 rounded-lg text-center bg-blue-500  focus:bg-blue-500 border-2 border-solid border-blue-500 text-white font-bold"
           smooth
           to={'/#contact'}
           scroll={(el) => scrollWithOffset(el)}
