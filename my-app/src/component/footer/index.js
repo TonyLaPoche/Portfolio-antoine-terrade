@@ -5,32 +5,35 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import scrollWithOffset from '../../utilities/ScollWithOfset';
 
+
+
+
 // == Composant
 const Footer = () => {
   return (
-    <footer className="page-footer light-blue">
-      <div className="container">
-        <div className="row">
-          <div className="col l6 s12">
-            <h5 className="white-text">Déjà fini ?</h5>
-            <p className="grey-text text-lighten-4">
+    <footer className=" bg-blue-500  text-white block">
+      <div className="container p-4">
+        <div className="mb-5 mx-auto flex flex-col md:flex-row md:justify-between">
+          <div className="flex flex-col justify-between">
+            <h5 className="text-white text-xl my-4">Déjà fini ?</h5>
+            <p className=" text-white ml-5">
               Retrouver tout les liens utiles dans cette section
             </p>
-            <p>
+            <p className=" text-white ml-5">
               Espèrent que ce portefolio vous aura permit de mieux me connaitre.
             </p>
           </div>
-          <div className="col l4 offset-l2 s12">
-            <h5 className="white-text">Lien utiles</h5>
-            <ul>
+          <div className="flex flex-col justify-between mt-4 md:mt-0">
+            <h5 className="text-white text-xl my-4">Lien utiles</h5>
+            <ul className=" text-white ml-5">
               <li>
-                <Link className="grey-text text-lighten-3" to="/site-map">
+                <Link className="text-white hover:underline underline-offset-1 italic" to="/site-map">
                   Site map
                 </Link>
               </li>
               <li>
                 <HashLink
-                  className="grey-text text-lighten-3"
+                  className="text-white hover:underline underline-offset-1 italic"
                   smooth
                   to="/#projets"
                   scroll={(el) => scrollWithOffset(el)}
@@ -40,7 +43,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  className="grey-text text-lighten-3"
+                  className="text-white hover:underline underline-offset-1 italic"
                   to="https://github.com/TonyLaPoche"
                 >
                   Github
@@ -48,7 +51,7 @@ const Footer = () => {
               </li>
               <li>
                 <HashLink
-                  className="grey-text text-lighten-3"
+                  className="text-white hover:underline underline-offset-1 italic"
                   smooth
                   to="/#projets"
                   scroll={(el) => scrollWithOffset(el)}
@@ -60,8 +63,8 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="footer-copyright">
-        <div className="container">© 2023 Terrade Antoine</div>
+      <div className="border-t-2 ">
+        <div className="text-slate-300 m-2">© 2023 Terrade Antoine</div>
       </div>
     </footer>
   );
