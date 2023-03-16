@@ -8,7 +8,7 @@ const About = () => {
     <>
       <section
         id="about"
-        className="scroll-mt-[80px] lg:px-10 xl:px-24 lg:py-28 py-10 bg-slate-100 flex flex-col-reverse lg:flex-row"
+        className="scroll-mt-[80px] lg:px-10 xl:px-24 lg:py-28 py-10 flex flex-col-reverse lg:flex-row"
       >
         <div className="mx-auto bg-gradient-to-r from-[#E6E5E3] shadow-lg lg:rounded-l-lg px-5 pt-5 pb-10 text-gray-800 w-full lg:w-8/12">
           <div className="md:hidden w-full pt-1 pb-5">
