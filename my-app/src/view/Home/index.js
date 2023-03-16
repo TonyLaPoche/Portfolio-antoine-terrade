@@ -12,6 +12,7 @@ import { useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 // import Banner from '../../component/banner';
 import About from '../../component/about/About';
+import CarouselM from '../../component/carouselProject/CarouselTailWind';
 
 // console.log(fakeProps);
 
@@ -57,7 +58,10 @@ export const Home = () => {
         Mes projets
       </h4>
 
-      <SliderM content={content} />
+      {/* <SliderM content={content} /> */}
+
+      <CarouselM />
+
       <div className="divider" style={{ margin: '3rem 0' }}></div>
       <h2 id="reseaux" className="center">
         mes réseaux
