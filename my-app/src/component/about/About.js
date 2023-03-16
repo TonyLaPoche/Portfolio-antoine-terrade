@@ -12,11 +12,11 @@ const About = () => {
       >
         <div className="mx-auto bg-gradient-to-r from-[#E6E5E3] shadow-lg lg:rounded-l-lg px-5 pt-5 pb-10 text-gray-800 w-full lg:w-8/12">
           <div className="md:hidden w-full pt-1 pb-5">
-            <div className=" overflow-hidden relative z-10 rounded-full w-40 h-40 -mt-16 mx-auto shadow-lg">
+            <div className=" overflow-hidden relative  rounded-full w-40 h-40 -mt-16 mx-auto shadow-lg">
               <img
                 src={profilPicture}
                 alt=""
-                className=" absolute h-[100%] w-[100%]"
+                className=" absolute z-10 h-[100%] w-[100%]"
               />
             </div>
           </div>
@@ -47,7 +47,7 @@ const About = () => {
                 Antoine Terrade
               </p>
             </div>
-            <div className="container p-5 z-10 mx-auto lg:flex space-y-5 lg:space-y-0 items-baseline justify-center">
+            <div className="container p-5  mx-auto lg:flex space-y-5 lg:space-y-0 items-baseline justify-center">
               <ul className="flex justify-between tracking-wider font-medium ">
                 <li className="px-2">
                   <a
@@ -102,7 +102,6 @@ const About = () => {
               bottom: '0',
               objectFit: 'cover',
               color: 'transparent',
-              zIndex:"0"
             }}
             alt=""
           />
