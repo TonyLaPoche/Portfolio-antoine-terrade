@@ -20,12 +20,12 @@ const SideNav = ({ ...props }) => {
   // console.groupCollapsed('nav');
   // console.log(nav);
   // console.groupEnd();
-  // TODO - A déplacé
+  // TODO - A déplacer
   const isActiveLink = (link) => {
     return location.pathname === `/${link}` ? 'red-text' : 'waves-effect ';
   };
 
-  // TODO - A déplacé
+  // TODO - A déplacer
   const navGenerator = () => {
     const NavElt = nav.map((elt) => {
       if (

@@ -13,21 +13,21 @@ const Nav2 = () => {
     <>
       <div className="h-16 relative">
         <nav
-          className=" fixed p-3 bg-blue-500 flex justify-between items-center"
+          className=" fixed p-3 bg-blue-500 flex justify-between items-center "
         //   style={{ zIndex: '990' }}
         >
           <button
             onClick={() => setAsideNav((s) => !s)}
-            className="p-1 border-2 border-solid border-blue-700  focus:bg-blue-500"
+            className="p-1 focus:bg-blue-500"
           >
             <AiOutlineMenu style={{ height: 30, width: 30 }} />
           </button>
-          <div className="flex justify-center">
-            <a href="/#root" className="font-bold text-4xl">
+          <div className="flex justify-center ">
+            <a href="/#root" className="font-bold text-center text-xl md:text-4xl">
               Antoine Terrade
             </a>
           </div>
-          <div className="flex justify-between ">
+          <div className="hidden md:flex justify-between md:gap-4">
             <a
               style={{ display: 'flex', alignItems: 'center' }}
               href="https://github.com/TonyLaPoche"
@@ -65,7 +65,7 @@ const Nav2 = () => {
       />
 
       <aside
-        className={`fixed top-0 h-screen w-[80vw] md:w-[40vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${asideNav ? 'translate-x-0' : '-translate-x-full'} ${asideNav ? '' : 'pointer-events-none'}
+        className={`fixed top-0 h-screen w-[80vw] md:w-[20vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${asideNav ? 'translate-x-0' : '-translate-x-full'} ${asideNav ? '' : 'pointer-events-none'}
         `}
         style={{
           zIndex: '991',
@@ -74,9 +74,8 @@ const Nav2 = () => {
       >
         <div id='asider-head' className='w-full h-[330px] bg-cover bg-no-repeat bg-center bg-[url(https://materializecss.com/images/office.jpg)] flex flex-col justify-center items-center  '>
             <div className='absolute right-4 top-4'>
-            <button 
-            style={{ color:"white"}}
-            className='p-2 bg-blue-600 focus:bg-blue-500 rounded-full '
+            <button
+            className='p-2 bg-blue-500 focus:bg-blue-500 rounded-full '
             onClick={() => {setAsideNav((s) => !s)}}
             >
                 <VscChromeClose color='white' style={{ height: 30, width: 30 }} />
@@ -88,10 +87,9 @@ const Nav2 = () => {
             <p className='text-2xl font-bold shadow-slate-800 mt-4'>Développeur Web</p>
         </div>
         <div id="aside-body">
-        <div className="flex flex-col divide-y-2 divide-solid divide-slate-500">
+        <div className="flex flex-col h-full justify-center font-bold  gap-4 p-4">
           <a href="/">Accueil</a>
           <a href="/">About</a>
-          
           <DropdownMenu />
         </div>
       </div>
