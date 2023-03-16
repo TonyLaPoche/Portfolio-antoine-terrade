@@ -102,6 +102,7 @@ const About = () => {
               bottom: '0',
               objectFit: 'cover',
               color: 'transparent',
+              zIndex:"0"
             }}
             alt=""
           />

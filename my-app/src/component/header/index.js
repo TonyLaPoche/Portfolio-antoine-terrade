@@ -1,6 +1,7 @@
 // == Import
 
 import Nav from './nav';
+import Nav2 from './navTailWinf';
 
 const navElements = [
   {
@@ -24,7 +25,8 @@ const navElements = [
 function Header() {
   return (
     <header>
-      <Nav navElements={navElements} />
+      {/* <Nav navElements={navElements} /> */}
+      <Nav2 />
     </header>
   );
 }

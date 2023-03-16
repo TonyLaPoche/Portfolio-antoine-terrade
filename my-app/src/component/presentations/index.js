@@ -37,10 +37,10 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
           <AutoTyping
             active // <boolean>
             textRef="Ambitieux, Créatif, Curieux" // <string>
-            writeSpeed={350} // <number>
-            deleteSpeed={150} // <number>
-            delayToWrite={1000} // <number>
-            delayToDelete={2000} // <number>
+            // writeSpeed={350} // <number>
+            // deleteSpeed={150} // <number>
+            delayToWrite={3500} // <number>
+            delayToDelete={1500} // <number>
           />
           <BlinkCursor
             active // <boolean>
