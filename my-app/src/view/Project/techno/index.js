@@ -1,17 +1,10 @@
-// == Import
-// import PropTypes from 'prop-types';
-import { Chip, Icon } from 'react-materialize';
-// == Composant
-
 const Techno = ({ techno }) => {
   return (
-    <Chip
-      close={false}
-      closeIcon={<Icon className="close">close</Icon>}
-      options={null}
+    <div
+      className=' tracking-[.1rem] uppercase text-sm bg-slate-300 text-slate-800 px-4 py-2 rounded-full mr-5'
     >
       {techno}
-    </Chip>
+    </div>
   );
 };
 
