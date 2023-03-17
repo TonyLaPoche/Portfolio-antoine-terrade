@@ -1,25 +1,11 @@
 import { useEffect, useState } from "react";
+import fakeProps from "../../../data/fake";
+console.log(fakeProps[2].content);
 
-const data = [
-	{
-		id: 1,
-		title: '1-title',
-		src: 'https://fakeimg.pl/300/',
-		alt: '1-alt',
-	},
-	{
-		id: 2,
-		title: '2-title',
-		src: 'https://fakeimg.pl/400/',
-		alt: '2-alt',
-	},
-	{
-		id: 3,
-		title: '3-title',
-		src: 'https://fakeimg.pl/500/',
-		alt: '3-alt',
-	},
-];
+const data = fakeProps[2].content
+
+
+
 
 const CarouselM = () => {
 	const [currentImage, setCurrentImage] = useState(0);
@@ -29,15 +15,15 @@ const CarouselM = () => {
 		const interval = setInterval(() => {
 			setSeconds(seconds + 1)
 
-			if(seconds === 5){
-				setCurrentImage(currentImage === (data.length -1) ? 0 : currentImage + 1)
+			if (seconds === 5) {
+				setCurrentImage(currentImage === (data.length - 1) ? 0 : currentImage + 1)
 				setSeconds(0)
 				clearInterval(interval)
 			}
 		}, 1000);
 
 		return () => clearInterval(interval);
-	
+
 	}, [seconds, currentImage]);
 
 	return (
@@ -46,88 +32,55 @@ const CarouselM = () => {
 				id="carouselExampleCaptions"
 				className="relative">
 				<div
-					className="absolute right-0 bottom-0 left-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0 gap-x-3"
+					className="absolute right-0 bottom-0 left-0 z-[2] mb-4 flex list-none justify-center p-0 gap-x-3"
 				>
 					{data.map((img, index) => {
-						console.log(index === currentImage)
+						// console.log(index === currentImage)
 						return <button
-						type="button"
-						onClick={() => setCurrentImage(index)}
-						className={`${(index  === currentImage) ? 'bg-blue-200' : 'bg-white'}   box-content h-[5px] w-[40px] flex-initial cursor-pointer border-0  border-solid border-transparent  bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none ring-offset-2 ring-2 ring-blue-600`}
-						aria-label="Slide 2"
+							key={index + '-button'}
+							type="button"
+							onClick={() => setCurrentImage(index)}
+							className={`${(index === currentImage) ? 'bg-blue-900' : 'bg-white'}  focus:bg-blue-900 focus:ring-blue-700 rounded box-content h-[8px] w-[2%] flex-initial cursor-pointer border-1  border-solid border-transparent ring-offset-2 ring-2 ring-blue-600`}
 						/>
 					})}
 				</div>
-
-
 				<div
-					className="relative p-20 overflow-hidden after:clear-both after:block after:content-['']">
-					<div
-						className="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-					>
-						<img
-							src={data[currentImage].src}
-							className="block w-full"
-							alt="..." />
+					className="relative overflow-hidden after:clear-both after:block after:content-['']">
+					<div className="px-16 py-4 md:px-36 relative w-full">
+						<a href={`/project/${data[currentImage].id}`}>
+							<img
+								src={data[currentImage].picture}
+								className="block hover:shadow-xl  transition-shadow rounded-lg shadow-lg w-full"
+								alt={data[currentImage].alt} 
+							/>
+						</a>
 						<div
 							className="absolute inset-x-[15%] bottom-5 py-5 text-center text-white block">
-							<h5 className="text-xl">{data[currentImage].title}</h5>
-							<p>
-								Some representative placeholder content for the first slide.
+							<h5 className="text-xl text-slate-800 ">{data[currentImage].title}</h5>
+							<p className=" truncate text-center text-slate-700  ">
+							{data[currentImage].description[0]}
 							</p>
 						</div>
 					</div>
-					{/* <div
-						className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-						data-te-carousel-item
-						style={{ backfaceVisibility: "hidden" }}>
-						<img
-							src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-							className="block w-full"
-							alt="..." />
-						<div
-							className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-							<h5 className="text-xl">Second slide label</h5>
-							<p>
-								Some representative placeholder content for the second slide.
-							</p>
-						</div>
-					</div>
-					<div
-						className="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
-						data-te-carousel-item
-						style={{ backfaceVisibility: "hidden" }}>
-						<img
-							src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-							className="block w-full"
-							alt="..." />
-						<div
-							className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-							<h5 className="text-xl">Third slide label</h5>
-							<p>
-								Some representative placeholder content for the third slide.
-							</p>
-						</div>
-					</div> */}
 				</div>
 				<button
-					className="absolute focus:bg-transparent top-0 bottom-0 left-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+					className="absolute bg-transparent focus:bg-transparent top-0 bottom-0 left-0 z-[1] flex w-[20%] items-center justify-center border-0 p-0 text-center text-blue-800 opacity-80 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-blue-800 hover:no-underline hover:opacity-90 hover:outline-none focus:text-blue-800 focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 					type="button"
 					onClick={() => {
 						currentImage > 0 ? setCurrentImage(currentImage - 1) : setCurrentImage(data.length - 1)
 					}}
-					>
-					<span className="inline-block h-8 w-8">
+				>
+					<span className="inline-block h-8 w-8 ">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
-							stroke-width="1.5"
+							strokeWidth="1.5"
 							stroke="currentColor"
 							className="h-6 w-6">
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
+								strokeLinecap="round"
+								strokeLinejoin="round"
 								d="M15.75 19.5L8.25 12l7.5-7.5" />
 						</svg>
 					</span>
@@ -136,23 +89,23 @@ const CarouselM = () => {
 					>Previous</span>
 				</button>
 				<button
-					className="absolute focus:bg-transparent top-0 bottom-0 right-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+					className="absolute bg-transparent focus:bg-transparent top-0 bottom-0 right-0 z-[1] flex w-[20%] items-center justify-center border-0 p-0 text-center text-blue-800 opacity-80 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-blue-800 hover:no-underline hover:opacity-90 hover:outline-none focus:text-blue-800 focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
 					type="button"
 					onClick={() => {
-						currentImage < data.length - 1  ? setCurrentImage(currentImage + 1) : setCurrentImage(0)
+						currentImage < data.length - 1 ? setCurrentImage(currentImage + 1) : setCurrentImage(0)
 					}}
-					>
+				>
 					<span className="inline-block h-8 w-8">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							fill="none"
 							viewBox="0 0 24 24"
-							stroke-width="1.5"
+							strokeWidth="1.5"
 							stroke="currentColor"
 							className="h-6 w-6">
 							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
+								strokeLinecap="round"
+								strokeLinejoin="round"
 								d="M8.25 4.5l7.5 7.5-7.5 7.5" />
 						</svg>
 					</span>
