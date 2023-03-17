@@ -43,7 +43,9 @@ const Project = () => {
               </CardTitle>
             }
           >
-            {data.description}
+            {/* {data.description} */}
+							{data.description.map(speech => <p>{speech}</p>)}
+
           </Card>
         </Col>
       </Row>
