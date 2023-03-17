@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
-import {FiChevronUp, FiChevronDown} from 'react-icons/fi'
+import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   const projects = ['projet 1', 'projet 2', 'projet 3'];
@@ -16,7 +16,7 @@ const DropdownMenu = () => {
         onClick={() => setIsOpen(!isOpen)}
       >
         <span>Projects</span>
-       {isOpen ? <FiChevronUp /> : <FiChevronDown />}
+        {isOpen ? <FiChevronUp /> : <FiChevronDown />}
       </button>
 
       <Transition
@@ -29,7 +29,12 @@ const DropdownMenu = () => {
         leaveTo="transform scale-95 opacity-0"
       >
         <div className="origin-top-right absolute right-0 mt-0 w-full rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5">
-          <div className="py-1" role="menu" aria-orientation="vertical" aria-labelledby="options-menu">
+          <div
+            className="py-1"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="options-menu"
+          >
             {projects.map((project, index) => (
               <a
                 key={index}
@@ -45,6 +50,6 @@ const DropdownMenu = () => {
       </Transition>
     </div>
   );
-}
+};
 
-export default DropdownMenu
+export default DropdownMenu;

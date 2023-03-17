@@ -1,20 +1,19 @@
 import { AiFillGithub, AiFillLinkedin, AiOutlineMenu } from 'react-icons/ai';
 import { BsDiscord } from 'react-icons/bs';
-import { VscChromeClose } from 'react-icons/vsc'
+import { VscChromeClose } from 'react-icons/vsc';
 import { useState } from 'react';
 import profilPicture from '../../../assets/SVG/profil.jpeg';
 import DropdownMenu from './dropDownMenu';
 
 const Nav2 = () => {
   const [asideNav, setAsideNav] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
 
   return (
     <>
-      <div className="h-16 relative">
+      <div className="h-16 relative w-full">
         <nav
-          className=" fixed p-3 bg-blue-500 flex justify-between items-center "
-        //   style={{ zIndex: '990' }}
+          className=" fixed w-full text-white p-3 bg-blue-500 flex justify-between items-center "
+          //   style={{ zIndex: '990' }}
         >
           <button
             onClick={() => setAsideNav((s) => !s)}
@@ -23,7 +22,10 @@ const Nav2 = () => {
             <AiOutlineMenu style={{ height: 30, width: 30 }} />
           </button>
           <div className="flex justify-center ">
-            <a href="/#root" className="font-bold text-center text-xl md:text-4xl">
+            <a
+              href="/#root"
+              className="font-bold text-center text-xl md:text-4xl"
+            >
               Antoine Terrade
             </a>
           </div>
@@ -65,35 +67,44 @@ const Nav2 = () => {
       />
 
       <aside
-        className={`fixed top-0 h-screen w-[80vw] md:w-[20vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${asideNav ? 'translate-x-0' : '-translate-x-full'} ${asideNav ? '' : 'pointer-events-none'}
+        className={`fixed top-0 h-screen w-[80vw] md:w-[20vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${
+          asideNav ? 'translate-x-0' : '-translate-x-full'
+        } ${asideNav ? '' : 'pointer-events-none'}
         `}
         style={{
           zIndex: '991',
-          boxShadow: '0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2)'
+          boxShadow:
+            '0 2px 2px 0 rgba(0,0,0,0.14),0 3px 1px -2px rgba(0,0,0,0.12),0 1px 5px 0 rgba(0,0,0,0.2)',
         }}
       >
-        <div id='asider-head' className='w-full h-[330px] bg-cover bg-no-repeat bg-center bg-[url(https://materializecss.com/images/office.jpg)] flex flex-col justify-center items-center  '>
-            <div className='absolute right-4 top-4'>
+        <div
+          id="asider-head"
+          className="w-full h-[330px] bg-cover bg-no-repeat bg-center bg-[url(https://materializecss.com/images/office.jpg)] flex flex-col justify-center items-center  "
+        >
+          <div className="absolute right-4 top-4">
             <button
-            className='p-2 bg-blue-500 focus:bg-blue-500 rounded-full '
-            onClick={() => {setAsideNav((s) => !s)}}
+              className="p-2 bg-blue-500 focus:bg-blue-500 rounded-full "
+              onClick={() => {
+                setAsideNav((s) => !s);
+              }}
             >
-                <VscChromeClose color='white' style={{ height: 30, width: 30 }} />
+              <VscChromeClose color="white" style={{ height: 30, width: 30 }} />
             </button>
-            </div>
-            <div className='w-[125px] h-[125px] rounded-full  bg-slate-500'>
-                <img src={profilPicture} alt="" className='rounded-full' />
-            </div>
-            <p className='text-2xl font-bold shadow-slate-800 mt-4'>Développeur Web</p>
+          </div>
+          <div className="w-[125px] h-[125px] rounded-full  bg-slate-500">
+            <img src={profilPicture} alt="" className="rounded-full" />
+          </div>
+          <p className="text-2xl font-bold shadow-slate-800 mt-4">
+            Développeur Web
+          </p>
         </div>
         <div id="aside-body">
-        <div className="flex flex-col h-full justify-center font-bold  gap-4 p-4">
-          <a href="/">Accueil</a>
-          <a href="/">About</a>
-          <DropdownMenu />
+          <div className="flex flex-col h-full justify-center font-bold  gap-4 p-4">
+            <a href="/">Accueil</a>
+            <a href="/">About</a>
+            <DropdownMenu />
+          </div>
         </div>
-      </div>
-
       </aside>
     </>
   );

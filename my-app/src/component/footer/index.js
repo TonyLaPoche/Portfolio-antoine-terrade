@@ -5,9 +5,6 @@ import { Link } from 'react-router-dom';
 import { HashLink } from 'react-router-hash-link';
 import scrollWithOffset from '../../utilities/ScollWithOfset';
 
-
-
-
 // == Composant
 const Footer = () => {
   return (
@@ -27,7 +24,10 @@ const Footer = () => {
             <h5 className="text-white text-xl my-4">Lien utiles</h5>
             <ul className=" text-white ml-5">
               <li>
-                <Link className="text-white hover:underline underline-offset-1 italic" to="/site-map">
+                <Link
+                  className="text-white hover:underline underline-offset-1 italic"
+                  to="/site-map"
+                >
                   Site map
                 </Link>
               </li>
