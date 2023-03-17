@@ -1,4 +1,5 @@
 import profilPicture from '../assets/SVG/profil.jpeg';
+import portfolio from '../assets/portfolio_500x500.png'
 // import logoOclock from '../assets/SVG/iconOclock.svg';
 // import think from '../assets/SVG/think.svg';
 // import target from '../assets/SVG/target_goal_icon_152113.svg';
@@ -82,7 +83,7 @@ export const fakeProps = [
             "Ce projet à d'abords été pensez pour être responsive mobile",
             "Concernant la suite de ce portfolio j'ai pour but de la passé en templates afin de pouvoir le partager au devs junior comme moi qui recherche un modèles ou s'entrainer/pratiquer React"
         ],
-        picture: 'https://fakeimg.pl/300/',
+        picture: portfolio,
       },
       {
         id: 'presentation-projet-2',
