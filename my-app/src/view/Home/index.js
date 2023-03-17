@@ -1,7 +1,6 @@
 import { Helmet } from 'react-helmet-async';
 import './styles.css';
 import React from 'react';
-import { SliderM } from '../../component/carouselProject';
 
 import fakeProps from '../../data/fake';
 import PresentationAera from '../../component/presentations';
@@ -10,16 +9,17 @@ import Reseaux from '../../component/reseaux';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
+
+
 // import Banner from '../../component/banner';
 import About from '../../component/about/About';
-import CarouselM from '../../component/carouselProject/CarouselTailWind';
+import Projects from '../../component/projects';
 
 // console.log(fakeProps);
 
 const presentation = fakeProps[1].content;
 // console.log(presentation);
 
-const { content } = fakeProps[2];
 
 // == Composant
 export const Home = () => {
@@ -54,13 +54,8 @@ export const Home = () => {
       {/* <Banner/> */}
       <div className="divider" />
       <About />
-      <h4 className="text-center text-4xl mb-10" id="projets">
-        Mes projets
-      </h4>
 
-      {/* <SliderM content={content} /> */}
-
-      <CarouselM />
+      <Projects />
 
       <div className="divider" style={{ margin: '3rem 0' }}></div>
       <h2 id="reseaux" className="center">
