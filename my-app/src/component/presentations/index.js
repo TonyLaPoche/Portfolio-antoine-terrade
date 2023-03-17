@@ -38,8 +38,6 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
           <AutoTyping
             active // <boolean>
             textRef="Ambitieux, Créatif, Curieux" // <string>
-            // writeSpeed={350} // <number>
-            // deleteSpeed={150} // <number>
             delayToWrite={3500} // <number>
             delayToDelete={1500} // <number>
           />
@@ -56,7 +54,6 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
         >
           Embauchez moi !
         </HashLink>
-        {/* // TODO Demandé si download un fichier de cette manière est une bonne pratique */}
         <a
           href="../../assets/CV/Terrade antoine.pdf"
           download="CV Antoine Terrade"

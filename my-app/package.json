@@ -1,14 +1,17 @@
 {
   "name": "my-app",
   "version": "0.1.0",
+  "homepage": "https://tonylapoche.github.io/Pocket-Template-Project",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@fontsource/roboto": "^4.5.8",
     "@headlessui/react": "^1.7.13",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "framer-motion": "^10.3.2",
+    "gh-pages": "^5.0.0",
     "materialize-css": "^1.0.0",
     "react": "^18.2.0",
     "react-auto-typing": "^1.0.0",
@@ -29,6 +32,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "prettify": "prettier --single-quote --trailing-comma all --write '{src,__{tests,mocks}__}/**/*.js'"

@@ -13,7 +13,6 @@ const Nav2 = () => {
       <div className="h-16 relative w-full">
         <nav
           className=" fixed w-full text-white p-3 bg-blue-500 flex justify-between items-center "
-          //   style={{ zIndex: '990' }}
         >
           <button
             onClick={() => setAsideNav((s) => !s)}

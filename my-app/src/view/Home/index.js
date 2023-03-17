@@ -49,8 +49,6 @@ export const Home = () => {
       <div className="w-full">
         {presentation.map((elt) => PresentationAera({ ...elt }))}
       </div>
-      {/* <Banner/> */}
-      <div className="divider" />
       <About />
 
       <Projects />
