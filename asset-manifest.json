@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/Pocket-Template-Project/static/css/main.8d2f7cff.css",
-    "main.js": "/Pocket-Template-Project/static/js/main.81fd0b1c.js",
+    "main.js": "/Pocket-Template-Project/static/js/main.0e19be8d.js",
     "static/js/787.28cb0dcd.chunk.js": "/Pocket-Template-Project/static/js/787.28cb0dcd.chunk.js",
     "static/media/portfolio_500x500.png": "/Pocket-Template-Project/static/media/portfolio_500x500.c0387b03fd5b8da17338.png",
     "static/media/profil.jpeg": "/Pocket-Template-Project/static/media/profil.36f4a70f8b9d03e433ff.jpeg",
     "static/media/Peugeot-404-conv-red2.webp": "/Pocket-Template-Project/static/media/Peugeot-404-conv-red2.dfebde774973b9b95159.webp",
     "index.html": "/Pocket-Template-Project/index.html",
     "main.8d2f7cff.css.map": "/Pocket-Template-Project/static/css/main.8d2f7cff.css.map",
-    "main.81fd0b1c.js.map": "/Pocket-Template-Project/static/js/main.81fd0b1c.js.map",
+    "main.0e19be8d.js.map": "/Pocket-Template-Project/static/js/main.0e19be8d.js.map",
     "787.28cb0dcd.chunk.js.map": "/Pocket-Template-Project/static/js/787.28cb0dcd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.8d2f7cff.css",
-    "static/js/main.81fd0b1c.js"
+    "static/js/main.0e19be8d.js"
   ]
 }
