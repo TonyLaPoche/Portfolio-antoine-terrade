@@ -40,25 +40,27 @@ const CarouselM = () => {
 							key={index + '-button'}
 							type="button"
 							onClick={() => setCurrentImage(index)}
-							className={`${(index === currentImage) ? 'bg-blue-900' : 'bg-white'}  focus:bg-blue-900 focus:ring-blue-700 rounded box-content h-[8px] w-[2%] flex-initial cursor-pointer border-1  border-solid border-transparent ring-offset-2 ring-2 ring-blue-600`}
+							className={`${(index === currentImage) ? 'bg-blue-900' : 'bg-white'} mb-4 focus:bg-blue-900 focus:ring-blue-700 rounded box-content h-[8px] w-[2%] flex-initial cursor-pointer border-1  border-solid border-transparent ring-offset-2 ring-2 ring-blue-600`}
 						/>
 					})}
 				</div>
 				<div
 					className="relative overflow-hidden after:clear-both after:block after:content-['']">
-					<div className="px-16 py-4 md:px-36 relative w-full">
+					<div className="px-16 py-4 md:px-36 relative w-full ">
 						<a href={`/project/${data[currentImage].id}`}>
 							<img
 								src={data[currentImage].picture}
-								className="block hover:shadow-xl  transition-shadow rounded-lg shadow-lg w-full"
-								alt={data[currentImage].alt} 
+								className="block hover:shadow-xl  ring-4 ring-offset-4 ring-slate-500 transition-shadow rounded-lg shadow-lg w-full"
+								alt={data[currentImage].alt}
 							/>
 						</a>
 						<div
-							className="absolute inset-x-[15%] bottom-5 py-5 text-center text-white block">
-							<h5 className="text-xl text-slate-800 ">{data[currentImage].title}</h5>
-							<p className=" truncate text-center text-slate-700  ">
-							{data[currentImage].description[0]}
+							className="absolute inset-x-[15%] bottom-20 p-5 text-center text-white block bg-slate-500/30 rounded-2xl "
+							style={{textShadow:"1px 1px 1px grey"}}
+						>
+							<h5 className="text-3xl text-slate-800 mb-2">{data[currentImage].title}</h5>
+							<p className=" truncate text-center text-gray-800 text-xl ">
+								{data[currentImage].description[0]}
 							</p>
 						</div>
 					</div>
