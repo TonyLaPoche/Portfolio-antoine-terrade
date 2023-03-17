@@ -1,69 +1,129 @@
 // == Import
-import { Button, Col, Icon, Row, Textarea, TextInput } from 'react-materialize';
+import { useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 // == Composant
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    console.log(e);
+    const data = {
+      name: e.target[0].value,
+      firstName: e.target[1].value,
+      email: e.target[2].value,
+      subject: e.target[3].value,
+      message: e.target[4].value,
+    };
+    console.log(data);
+    emailjs
+      .sendForm(
+        'portfolio',
+        'template_jj2aouc',
+        form.current,
+        '4V0LgwT25oMKXfNOZ',
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        },
+      );
+  };
   return (
-    <form action="POST" name="contact-form" className="container">
-      <Row>
-        <Col s={12} m={6}>
-          <TextInput
-            s={12}
-            icon="person"
-            data-length={10}
-            id="TextInput-27"
-            label="name"
-          />
-        </Col>
-        <Col s={12} m={6}>
-          <TextInput
-            s={12}
-            icon="person"
-            data-length={10}
-            id="TextInput-27"
-            label="lastName"
-          />
-        </Col>
-        <Col s={12} m={12}>
-          <TextInput
-            email
-            s={12}
-            icon="email"
-            error="Wrong Email sir"
-            id="TextInput-69"
-            label="Email"
-            success="Great"
-            validate
-          />
-        </Col>
-        <Col s={12} m={6}>
-          <Textarea
-            s={12}
-            data-length={120}
-            icon={<Icon>mode_edit</Icon>}
-            id="Textarea-29"
-            label="Textarea"
-            placeholder="Votre message"
-          />
-        </Col>
-        <Col s={12} m={6} className="center">
-          <Button
-            disabled={false}
-            node="button"
+    <section class="bg-white ">
+      <div class="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
+        <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
+          Contact
+        </h2>
+        <form ref={form} class="space-y-8" onSubmit={sendEmail}>
+          <div>
+            <label
+              for="name"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Nom
+            </label>
+            <input
+              type="name"
+              name="name"
+              class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="Votre Nom"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="firstName"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Prénom
+            </label>
+            <input
+              type="firstName"
+              name="firstName"
+              class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="Votre Prénom"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="email"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Email
+            </label>
+            <input
+              type="email"
+              name="email"
+              class="shadow-sm border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 "
+              placeholder="john@doe.com"
+              required
+            />
+          </div>
+          <div>
+            <label
+              for="subject"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-300"
+            >
+              Sujet
+            </label>
+            <input
+              type="text"
+              name="subject"
+              class="block p-3 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-300 shadow-sm focus:ring-primary-500 focus:border-primary-500 "
+              placeholder="Comment puis-je vous aider ?"
+              required
+            />
+          </div>
+          <div class="sm:col-span-2">
+            <label
+              for="message"
+              class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+            >
+              Votre message
+            </label>
+            <textarea
+              name="message"
+              rows="6"
+              class="block p-2.5 w-full text-sm text-gray-900 white rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500 "
+              placeholder="Bonjour Antoine, ..."
+            ></textarea>
+          </div>
+          <button
             type="submit"
-            waves="light"
-            tooltip="Vérifier vos informations avant de cliquer !"
-            tooltipOptions={{
-              position: 'bottom',
-            }}
-            // className="right pulse"
-            className={` ${true ? 'pulse' : ''}`}
+            value="Send"
+            class="py-3 px-5 text-sm font-medium text-center text-white rounded-lg bg-blue-500 sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 "
           >
-            Submit
-            <Icon right>send</Icon>
-          </Button>
-        </Col>
-      </Row>
-    </form>
+            Envoyer
+          </button>
+        </form>
+      </div>
+    </section>
   );
 };
 

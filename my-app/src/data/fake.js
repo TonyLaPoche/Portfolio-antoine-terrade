@@ -1,5 +1,5 @@
 import profilPicture from '../assets/SVG/profil.jpeg';
-import portfolio from '../assets/portfolio_500x500.png'
+import portfolio from '../assets/portfolio_500x500.png';
 // import logoOclock from '../assets/SVG/iconOclock.svg';
 // import think from '../assets/SVG/think.svg';
 // import target from '../assets/SVG/target_goal_icon_152113.svg';
@@ -74,14 +74,14 @@ export const fakeProps = [
         id: 'presentation-projet-1',
         title: 'Portfolio',
         alt: 'portfolio',
-        techno: ['react', 'tailwindcss','html'],
+        techno: ['react', 'tailwindcss', 'html'],
         link: 'https://github.com/TonyLaPoche/Pocket-Template-Project',
         demo: 'localhost:3000',
         etat: 'opérationnel',
-        description:[
-            "J'ai développer ce portefolio avec React et Tailwind !",
-            "Ce projet à d'abords été pensez pour être responsive mobile",
-            "Concernant la suite de ce portfolio j'ai pour but de la passé en templates afin de pouvoir le partager au devs junior comme moi qui recherche un modèles ou s'entrainer/pratiquer React"
+        description: [
+          "J'ai développer ce portefolio avec React et Tailwind !",
+          "Ce projet à d'abords été pensez pour être responsive mobile",
+          "Concernant la suite de ce portfolio j'ai pour but de la passé en templates afin de pouvoir le partager au devs junior comme moi qui recherche un modèles ou s'entrainer/pratiquer React",
         ],
         picture: portfolio,
       },
@@ -93,10 +93,10 @@ export const fakeProps = [
         link: 'https://github.com/TonyLaPoche/JDLV-React',
         demo: 'https://jdlv-tony-react-v4.surge.sh/',
         etat: 'opérationnel',
-        description:[
+        description: [
           "Le Jeu de la vie est un « jeu à zéro joueur », puisqu'il ne nécessite aucune intervention du joueur lors de son déroulement. Il s’agit d’un automate cellulaire, un modèle où chaque état conduit mécaniquement à l’état suivant à partir de règles préétablies.",
           "Projet crée en parallèles d'une formation bootcamp.",
-          "Si vous ne connaissez pas le concepte du jeu de la vie je vous conseille vivement la vidéo de Science Etonnante."
+          'Si vous ne connaissez pas le concepte du jeu de la vie je vous conseille vivement la vidéo de Science Etonnante.',
         ],
         picture:
           'https://imgs.search.brave.com/EoEu2ut15uUz9P3QYOsHxD84Vm7q339LDKfqBFxXMJ0/rs:fit:114:114:1/g:ce/aHR0cDovL3d3dy5j/b253YXlsaWZlLmNv/bS93L2ltYWdlcy84/LzgxL0dsaWRlci5n/aWY.gif',

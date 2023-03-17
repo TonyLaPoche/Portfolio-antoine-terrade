@@ -4,22 +4,20 @@ import React from 'react';
 
 import fakeProps from '../../data/fake';
 import PresentationAera from '../../component/presentations';
-import Contact from '../../component/contact';
 import Reseaux from '../../component/reseaux';
 import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
-
 // import Banner from '../../component/banner';
 import About from '../../component/about/About';
 import Projects from '../../component/projects';
+import { BsFillArrowUpCircleFill } from 'react-icons/bs';
 
 // console.log(fakeProps);
 
 const presentation = fakeProps[1].content;
 // console.log(presentation);
-
 
 // == Composant
 export const Home = () => {
@@ -57,17 +55,8 @@ export const Home = () => {
 
       <Projects />
 
-      <div className="divider" style={{ margin: '3rem 0' }}></div>
-      <h2 id="reseaux" className="center">
-        mes réseaux
-      </h2>
-
       <Reseaux />
-      <div className="divider" />
-      <h2 id="contact" className="center">
-        Contacter moi !
-      </h2>
-      <Contact />
+
       {scrollTop > 100 && (
         <HashLink
           className="btn-floating btn-small blue darken-2 right pulse"
@@ -75,7 +64,10 @@ export const Home = () => {
           smooth
           to="/#root"
         >
-          <i className="material-icons">arrow_upward</i>
+          <BsFillArrowUpCircleFill
+            size="25"
+            className=" animate-bounce text-blue-900"
+          />
         </HashLink>
       )}
     </>
