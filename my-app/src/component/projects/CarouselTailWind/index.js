@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import fakeProps from '../../../data/fake';
-console.log(fakeProps[2].content);
+// console.log(fakeProps[2].content);
 
 const data = fakeProps[2].content;
 

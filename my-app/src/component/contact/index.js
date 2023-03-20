@@ -22,7 +22,7 @@ const Contact = () => {
       subject: e.target[3].value,
       message: e.target[4].value,
     };
-    console.log(data);
+    // console.log(data);
     emailjs
       .sendForm(
         'portfolio',
