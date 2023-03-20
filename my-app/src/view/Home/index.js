@@ -47,7 +47,7 @@ export const Home = () => {
         style={{ scaleX: scrollYProgress }}
       />
       <div className="w-full">
-        {presentation.map((elt) => PresentationAera({ ...elt }))}
+        {presentation.map((elt, index) => <PresentationAera key={`${elt.id} - ${index}`} id={elt.id} title={elt.title} picture={elt.picture} position={elt.position} />)}
       </div>
       <About />
 

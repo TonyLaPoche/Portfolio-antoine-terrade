@@ -99,9 +99,11 @@ const Nav2 = () => {
         </div>
         <div id="aside-body">
           <div className="flex flex-col h-full justify-center font-bold  gap-4 p-4">
-            <a href="/">Accueil</a>
-            <a href="/">About</a>
+            <a href="/#home" className='text-center' >Accueil</a>
+            <hr className='border-1 border-slate-400 w-1/2 mx-auto my-4'/>
+            <a href="/#about">Qui suis-je ?</a>
             <DropdownMenu />
+            <a href="/#reseaux">Contact</a>
           </div>
         </div>
       </aside>

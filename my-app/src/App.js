@@ -5,20 +5,17 @@ import Project from './view/Project';
 import Home from './view/Home';
 import './App.css';
 
-export const url = process.env.NODE_ENV === 'production'
-  ? process.env.REACT_APP_URL_PROD
-  : false;
 
-  console.log(url);
-  console.log(process.env.NODE_ENV);
+// export const baseURL = process.env.NODE_ENV === "development" ? process.env.PUBLIC_URL : process.env.REACT_APP_URL_BASE_URL;
+export const baseURL = '/';
 
 const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path={url ? url : '/'} element={<Layout />}>
+        <Route path={'/'} element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path={`${url ? url : '/'}:id`} element={<Project />} />
+          <Route path={'/projet/:id'} element={<Project key={'uniqueKey'} />} />
           <Route path="*" element={<Page404 />} />
         </Route>
       </Routes>
