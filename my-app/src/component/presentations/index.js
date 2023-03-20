@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import scrollWithOffset from '../../utilities/ScollWithOfset';
 
+import MONCV from '../../assets/CV/Terradeantoine.pdf';
+
 const PresentationAera = ({ id, title, picture, position }) => {
   return (
     <section
@@ -56,7 +58,7 @@ const PresentationAera = ({ id, title, picture, position }) => {
           Embauchez moi !
         </HashLink>
         <a
-          href="../../assets/CV/Terrade antoine.pdf"
+          href={MONCV}
           download="CV Antoine Terrade"
           className="ml-2 px-5 py-4 rounded-lg text-center border-2 focus:bg-white border-solid border-blue-500 bg-white text-blue-500 font-bold"
         >
