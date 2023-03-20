@@ -23,14 +23,14 @@ const Footer = () => {
           <div className="flex flex-col justify-between mt-4 md:mt-0">
             <h5 className="text-white text-xl my-4">Liens utiles</h5>
             <ul className=" text-white ml-5">
-              <li>
+              {/* <li> //TODO - a mettre en route
                 <Link
                   className="text-white hover:underline underline-offset-1 italic"
                   to="/site-map"
                 >
                   Site map
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <HashLink
                   className="text-white hover:underline underline-offset-1 italic"
