@@ -7,8 +7,8 @@ import fakeProps from '../../../../data/fake';
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
   // const projects = ['projet 1', 'projet 2', 'projet 3'];
-  
-  const projects = fakeProps[2].content
+
+  const projects = fakeProps[2].content;
 
   return (
     <div className="relative">

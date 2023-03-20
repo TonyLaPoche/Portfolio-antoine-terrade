@@ -30,7 +30,9 @@ const Project = () => {
             <div className="p-4 flex flex-col justify-between divide-y">
               <div className="leading-5">
                 {data.description.map((speech, index) => (
-                  <p className="mb-2 text-justify" key={`${index}-speech`}>{speech}</p>
+                  <p className="mb-2 text-justify" key={`${index}-speech`}>
+                    {speech}
+                  </p>
                 ))}
               </div>
               <div className="flex justify-evenly pt-2">

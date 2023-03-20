@@ -6,7 +6,8 @@ import scrollWithOffset from '../../utilities/ScollWithOfset';
 
 const PresentationAera = ({ id, title, picture, position }) => {
   return (
-    <section id='home'
+    <section
+      id="home"
       className={`flex py-20 justify-center bg-gradient-to-r from-[#E6E5E3] items-center mb-10 ${
         position === 'left' ? 'bg-white' : 'bg-blue-500'
       } ${position === 'right' ? 'flex-row' : 'flex-row-reverse'}`}
