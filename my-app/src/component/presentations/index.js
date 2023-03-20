@@ -59,7 +59,6 @@ const PresentationAera = ({ id, title, picture, position }) => {
         </HashLink>
         <a
           href={MONCV}
-          download="CV Antoine Terrade"
           className="ml-2 px-5 py-4 rounded-lg text-center border-2 focus:bg-white border-solid border-blue-500 bg-white text-blue-500 font-bold"
         >
           Mon Cv
