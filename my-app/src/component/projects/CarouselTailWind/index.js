@@ -44,7 +44,7 @@ const CarouselM = () => {
         </div>
         <div className="relative overflow-hidden after:clear-both after:block after:content-['']">
           <div className="px-16 py-4 md:px-36 relative w-full ">
-            <a href={`/project/${data[currentImage].id}`}>
+            <a href={`/projet/${data[currentImage].id}`}>
               <img
                 src={data[currentImage].picture}
                 className="block hover:shadow-xl  ring-4 ring-offset-4 ring-slate-500 transition-shadow rounded-lg shadow-lg w-full"

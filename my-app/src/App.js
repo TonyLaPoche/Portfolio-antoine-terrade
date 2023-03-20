@@ -5,19 +5,21 @@ import Project from './view/Project';
 import Home from './view/Home';
 import './App.css';
 
-function App() {
+// export const baseURL = process.env.NODE_ENV === "development" ? process.env.PUBLIC_URL : process.env.REACT_APP_URL_BASE_URL;
+export const baseURL = '/';
+
+const App = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Layout />}>
+        <Route path={'/'} element={<Layout />}>
           <Route index element={<Home />} />
-          <Route path="url-repos-2" element={<p>page du repos 2</p>} />
+          <Route path={'/projet/:id'} element={<Project key={'uniqueKey'} />} />
           <Route path="*" element={<Page404 />} />
-          <Route path="project/:id" element={<Project />} />
         </Route>
       </Routes>
     </BrowserRouter>
   );
-}
+};
 
 export default App;

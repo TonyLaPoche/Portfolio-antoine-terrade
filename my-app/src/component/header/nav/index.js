@@ -8,6 +8,8 @@ import { BsDiscord } from 'react-icons/bs';
 import scrollWithOffset from '../../../utilities/ScollWithOfset';
 import useWindowSize from '../../../hooks';
 import fakeProps from '../../../data/fake';
+import { url } from '../../../App';
+
 const SideNav = ({ ...props }) => {
   const [slider, setSlider] = useState(false);
   const [subSlider, setSubSlider] = useState(false);
@@ -85,9 +87,9 @@ const SideNav = ({ ...props }) => {
                   <ul key={elt.name + '-callapsible-body-ul'}>
                     {elt.content.map((content) => (
                       <li key={'li' + content.id}>
-                        <Link
+                        <a
                           key={content.id + content.title}
-                          to={'/project/' + content.id}
+                          href={url ? url : '/' + content.id}
                           style={{ marginLeft: '15px', fontSize: '1rem' }}
                           className={`${isActiveLink(
                             content.link,
@@ -101,7 +103,7 @@ const SideNav = ({ ...props }) => {
                             arrow_forward
                           </i>{' '}
                           {content.title}
-                        </Link>
+                        </a>
                       </li>
                     ))}
                   </ul>

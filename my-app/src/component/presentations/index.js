@@ -4,9 +4,10 @@ import PropTypes from 'prop-types';
 import { HashLink } from 'react-router-hash-link';
 import scrollWithOffset from '../../utilities/ScollWithOfset';
 
-const PresentationAera = ({ id, title, description, picture, position }) => {
+const PresentationAera = ({ id, title, picture, position }) => {
   return (
-    <div
+    <section
+      id="home"
       className={`flex py-20 justify-center bg-gradient-to-r from-[#E6E5E3] items-center mb-10 ${
         position === 'left' ? 'bg-white' : 'bg-blue-500'
       } ${position === 'right' ? 'flex-row' : 'flex-row-reverse'}`}
@@ -38,8 +39,6 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
           <AutoTyping
             active // <boolean>
             textRef="Ambitieux, Créatif, Curieux" // <string>
-            // writeSpeed={350} // <number>
-            // deleteSpeed={150} // <number>
             delayToWrite={3500} // <number>
             delayToDelete={1500} // <number>
           />
@@ -56,7 +55,6 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
         >
           Embauchez moi !
         </HashLink>
-        {/* // TODO Demandé si download un fichier de cette manière est une bonne pratique */}
         <a
           href="../../assets/CV/Terrade antoine.pdf"
           download="CV Antoine Terrade"
@@ -78,14 +76,13 @@ const PresentationAera = ({ id, title, description, picture, position }) => {
           key={id + '-picture-' + title}
         />
       </div>
-    </div>
+    </section>
   );
 };
 
 PresentationAera.propTypes = {
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
   picture: PropTypes.string,
 };
 

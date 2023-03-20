@@ -9,15 +9,15 @@ const projects = fakeProps[2].content;
 // == Composant
 const Project = () => {
   const location = useLocation();
-  const slug = location.pathname.split('/').pop();
+  const slug = location.pathname.split('/projet/').pop();
   const data = projects.filter((proj) => proj.id === slug)[0];
 
   return (
     <div id="projects" className="container md:pt-5">
       <h2 className="center text-3xl my-3 uppercase">{data.title}</h2>
       <div className="flex justify-center">
-        {data.techno.map((t) => (
-          <Techno key={t} techno={t} />
+        {data.techno.map((t, index) => (
+          <Techno key={t + '' + index} techno={t} />
         ))}
       </div>
       <div className="mx-auto mb-5">
@@ -29,8 +29,10 @@ const Project = () => {
             </div>
             <div className="p-4 flex flex-col justify-between divide-y">
               <div className="leading-5">
-                {data.description.map((speech) => (
-                  <p className="mb-2 text-justify">{speech}</p>
+                {data.description.map((speech, index) => (
+                  <p className="mb-2 text-justify" key={`${index}-speech`}>
+                    {speech}
+                  </p>
                 ))}
               </div>
               <div className="flex justify-evenly pt-2">

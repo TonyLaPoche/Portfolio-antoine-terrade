@@ -1,15 +1,20 @@
 import { useState } from 'react';
 import { Transition } from '@headlessui/react';
 import { FiChevronUp, FiChevronDown } from 'react-icons/fi';
+
+import fakeProps from '../../../../data/fake';
+
 const DropdownMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const projects = ['projet 1', 'projet 2', 'projet 3'];
+  // const projects = ['projet 1', 'projet 2', 'projet 3'];
+
+  const projects = fakeProps[2].content;
 
   return (
     <div className="relative">
       <button
         type="button"
-        className="flex items-center gap-2  focus:bg-transparent font-bold text-gray-700 "
+        className="flex items-center gap-2  focus:bg-transparent font-bold"
         id="options-menu"
         aria-haspopup="true"
         aria-expanded="true"
@@ -37,12 +42,12 @@ const DropdownMenu = () => {
           >
             {projects.map((project, index) => (
               <a
-                key={index}
-                href="#!"
+                key={`${index}-${project.id}`}
+                href={`/${project.id}`}
                 className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 hover:text-gray-900"
                 role="menuitem"
               >
-                {project}
+                {project.title}
               </a>
             ))}
           </div>
