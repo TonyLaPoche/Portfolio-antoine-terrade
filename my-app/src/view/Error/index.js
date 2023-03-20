@@ -53,7 +53,7 @@ function Page404() {
             <div className="text-3xl float-right leading-tight h-3">"</div>
             <div className="text-3xl float-left leading-tight h-3">"</div>
             <p className="text-gray-600 text-center px-5 my-2 whitespace-pre-line">
-              Vous inquiétez pas! ça arrive même au meilleur !
+              Ne vous inquiétez pas ! Cela arrive même au meilleur !
             </p>
             <div className="container p-4  mx-auto ">
               <ul className="flex flex-col gap-4 items-center justify-center tracking-wider font-medium ">

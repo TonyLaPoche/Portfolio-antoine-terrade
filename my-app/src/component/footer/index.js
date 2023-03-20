@@ -14,23 +14,23 @@ const Footer = () => {
           <div className="flex flex-col justify-between">
             <h5 className="text-white text-xl my-4">Déjà fini ?</h5>
             <p className=" text-white ml-5">
-              Retrouver tout les liens utiles dans cette section
+              Retrouvez tous les liens utiles dans cette section.
             </p>
             <p className=" text-white ml-5">
-              Espèrent que ce portefolio vous aura permit de mieux me connaitre.
+              J'espère que ce portefolio vous aura permis de mieux me connaître.
             </p>
           </div>
           <div className="flex flex-col justify-between mt-4 md:mt-0">
-            <h5 className="text-white text-xl my-4">Lien utiles</h5>
+            <h5 className="text-white text-xl my-4">Liens utiles</h5>
             <ul className=" text-white ml-5">
-              <li>
+              {/* <li> //TODO - a mettre en route
                 <Link
                   className="text-white hover:underline underline-offset-1 italic"
                   to="/site-map"
                 >
                   Site map
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <HashLink
                   className="text-white hover:underline underline-offset-1 italic"
@@ -45,6 +45,8 @@ const Footer = () => {
                 <Link
                   className="text-white hover:underline underline-offset-1 italic"
                   to="https://github.com/TonyLaPoche"
+                  target="_blank"
+                  rel="noreferrer"
                 >
                   Github
                 </Link>
@@ -53,7 +55,7 @@ const Footer = () => {
                 <HashLink
                   className="text-white hover:underline underline-offset-1 italic"
                   smooth
-                  to="/#projets"
+                  to="/#contact"
                   scroll={(el) => scrollWithOffset(el)}
                 >
                   Contact
