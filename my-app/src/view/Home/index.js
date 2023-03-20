@@ -39,48 +39,38 @@ export const Home = () => {
   return (
     <>
       <Helmet>
-        {/* <!-- HTML Meta Tags --> */}
-        <title>Antoine Terrade Portfolio - Développeur React / Node</title>
         <meta
-          name="description"
-          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
+          property="og:title"
+          content="Terrade Antoine - Développeur Web  React / Node"
         />
-
-        {/* <!-- Google / Search Engine Tags --> */}
-        <meta itemprop="name" content="Antoine Terrade Portfolio - Développeur React / Node" />
-        <meta
-          itemprop="description"
-          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
-        />
-        <meta
-          itemprop="image"
-          content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
-        />
-
-        {/* <!-- Facebook Meta Tags --> */}
-        <meta property="og:url" content="https://terrade-antoine.web.app" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="terrade-antoine" />
         <meta
           property="og:description"
           content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
         />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://terrade-antoine.web.app" />
         <meta
           property="og:image"
           content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
         />
-
-        {/* <!-- Twitter Meta Tags --> */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Antoine Terrade Portfolio - Développeur React / Node" />
+        <meta property="og:image:type" content="image/jpeg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+        <meta name="twitter:site" content="Portfolio" />
+        <meta
+          name="twitter:title"
+          content="Terrade Antoine - Développeur Web  React / Node"
+        />
         <meta
           name="twitter:description"
           content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
         />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta
-          name="twitter:image"
+          name="twitter:image:src"
           content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
         />
+        <meta name="theme-color" content="#FD0054" />
       </Helmet>
       <motion.div
         className="progress-bar"
