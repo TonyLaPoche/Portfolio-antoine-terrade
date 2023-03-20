@@ -7,8 +7,8 @@ import CarouselM from './CarouselTailWind';
 export const Projects = () => {
   return (
     <section
-      id="projects"
-      className="scroll-mt-[80px] lg:px-10 xl:px-24 lg:py-28 py-10"
+      id="projets"
+      className=" md:px-24 lg:px-56 py-6 xl:px-96 "
     >
       <h4 className="text-center text-4xl mb-1">Mes projets</h4>
       <CarouselM />

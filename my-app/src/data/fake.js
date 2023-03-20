@@ -42,9 +42,10 @@ export const fakeProps = [
         demo: 'localhost:3000',
         etat: 'opérationnel',
         description: [
-          "J'ai développer ce portefolio avec React et Tailwind !",
-          "Ce projet à d'abords été pensez pour être responsive mobile",
-          "Concernant la suite de ce portfolio j'ai pour but de la passé en templates afin de pouvoir le partager au devs junior comme moi qui recherche un modèles ou s'entrainer/pratiquer React",
+          "J'ai développé ce portefolio avec React et Tailwind !",
+          "Ce projet à d'abords été pensée pour être responsive mobile",
+          "Concernant la suite de ce portfolio j'ai pour but de la passer en template vierge afin de pouvoir le partager aux devs junior comme moi qui recherche un modèles ou s'entrainer/pratiquer React",
+          "Je compte monter prochainement un back-office relié à ce porte-folio avec une API scrappant directement mon profil repos de Github afin de garnir automatiquement ce dernier",
         ],
         picture: portfolio,
       },
@@ -58,8 +59,8 @@ export const fakeProps = [
         etat: 'opérationnel',
         description: [
           "Le Jeu de la vie est un « jeu à zéro joueur », puisqu'il ne nécessite aucune intervention du joueur lors de son déroulement. Il s’agit d’un automate cellulaire, un modèle où chaque état conduit mécaniquement à l’état suivant à partir de règles préétablies.",
-          "Projet crée en parallèles d'une formation bootcamp.",
-          'Si vous ne connaissez pas le concepte du jeu de la vie je vous conseille vivement la vidéo de Science Etonnante.',
+          "Ce projet à été crée en parallèle d'une formation bootcamp.",
+          'Si vous ne connaissez pas le concept du jeu de la vie je vous conseille vivement la vidéo de Science Etonnante.',
         ],
         picture:
           'https://imgs.search.brave.com/EoEu2ut15uUz9P3QYOsHxD84Vm7q339LDKfqBFxXMJ0/rs:fit:114:114:1/g:ce/aHR0cDovL3d3dy5j/b253YXlsaWZlLmNv/bS93L2ltYWdlcy84/LzgxL0dsaWRlci5n/aWY.gif',

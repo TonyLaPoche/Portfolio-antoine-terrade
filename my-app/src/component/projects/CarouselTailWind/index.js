@@ -26,7 +26,7 @@ const CarouselM = () => {
 
   return (
     <>
-      <div id="carouselExampleCaptions" className="relative">
+      <div id="carouselExampleCaptions" className="relative max-w-xs md:max-w-[70vh] xl:max-w-[60vh] mx-auto">
         <div className="absolute right-0 bottom-0 left-0 z-[2] mb-4 flex list-none justify-center p-0 gap-x-3">
           {data.map((img, index) => {
             // console.log(index === currentImage)
@@ -43,7 +43,7 @@ const CarouselM = () => {
           })}
         </div>
         <div className="relative overflow-hidden after:clear-both after:block after:content-['']">
-          <div className="px-16 py-4 md:px-36 relative w-full ">
+          <div className="p-4 relative w-full ">
             <a href={`/projet/${data[currentImage].id}`}>
               <img
                 src={data[currentImage].picture}
