@@ -39,8 +39,48 @@ export const Home = () => {
   return (
     <>
       <Helmet>
+        {/* <!-- HTML Meta Tags --> */}
         <title>Antoine Terrade Portfolio - Développeur React / Node</title>
-        <meta name="description" content="Home page description" />
+        <meta
+          name="description"
+          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
+        />
+
+        {/* <!-- Google / Search Engine Tags --> */}
+        <meta itemprop="name" content="Antoine Terrade Portfolio - Développeur React / Node" />
+        <meta
+          itemprop="description"
+          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
+        />
+        <meta
+          itemprop="image"
+          content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
+        />
+
+        {/* <!-- Facebook Meta Tags --> */}
+        <meta property="og:url" content="https://terrade-antoine.web.app" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="terrade-antoine" />
+        <meta
+          property="og:description"
+          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
+        />
+        <meta
+          property="og:image"
+          content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
+        />
+
+        {/* <!-- Twitter Meta Tags --> */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Antoine Terrade Portfolio - Développeur React / Node" />
+        <meta
+          name="twitter:description"
+          content="Portfolio, Antoine Terrade développeur web, vous présente son portfolio avec ses projets et ses moyens de contact"
+        />
+        <meta
+          name="twitter:image"
+          content="https://terrade-antoine.web.app/static/media/profil.36f4a70f8b9d03e433ff.jpeg"
+        />
       </Helmet>
       <motion.div
         className="progress-bar"
