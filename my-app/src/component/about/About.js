@@ -24,21 +24,15 @@ const About = () => {
             <p className="text-3xl font-bold text-center">À propos</p>
           </div>
           <div className="w-full mb-10">
-            <div className="text-3xl text-left leading-tight h-3">"</div>
+            <div className="text-3xl leading-tight h-3">"</div>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              Je m'appelle Antoine Terrade, j'ai 26 ans je suis développeur Web.
-              Je suis passionné des technologies du web autour du digital et
-              particulièrement du Web dans sa globalité. Reconverti depuis peu
-              dans le web, je suis actuellement à la recherche d'opportunité
-              professionnelle avec les technologies React et/ou Node.js
+              Je m'appelle Antoine Terrade, j'ai 26 ans et je suis développeur web. Je suis passionné par les technologies du web, en particulier le développement front-end et back-end avec Javascript, ainsi que TypeScript que j'explore depuis peu. Ayant récemment fait une reconversion professionnelle dans le domaine du web, je suis actuellement à la recherche d'opportunités professionnelles en utilisant les technologies React et/ou Node.js.
             </p>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              J'ai développé au fil de mes formations et projets personnels une
-              forte attirance pour le développement Front-End et Back-End avec
-              Javascript et je m'essaie depuis peu à TypeScript.
+              Au fil de mes formations et projets personnels, j'ai acquis une solide expérience en développement web et une forte attirance pour le développement Front-End et Back-End avec Javascript.
             </p>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              Retrouvez l'ensemble de mes projets sur ce portfolio et si mon profil vous intéresse n'hésitez pas à prendre contact.
+              Vous pouvez découvrir l'ensemble de mes projets sur mon portfolio en ligne. Si mon profil vous intéresse, n'hésitez pas à me contacter.
             </p>
             <div className="text-3xl text-right leading-tight h-3">"</div>
             <div className="w-full">

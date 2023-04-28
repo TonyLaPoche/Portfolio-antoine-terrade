@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://terrade-antoine.web.app",
+  "homepage": "https://terrade-antoine.web.app/",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.10.0",

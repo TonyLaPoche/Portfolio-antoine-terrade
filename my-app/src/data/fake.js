@@ -1,8 +1,5 @@
 import profilPicture from '../assets/SVG/profil.jpeg';
 import portfolio from '../assets/portfolio_500x500.png';
-// import logoOclock from '../assets/SVG/iconOclock.svg';
-// import think from '../assets/SVG/think.svg';
-// import target from '../assets/SVG/target_goal_icon_152113.svg';
 
 export const fakeProps = [
   {
@@ -34,7 +31,7 @@ export const fakeProps = [
     path: '#créations',
     content: [
       {
-        id: 'presentation-projet-1',
+        id: '0-Portfolio',
         title: 'Portfolio',
         alt: 'portfolio',
         techno: ['react', 'tailwindcss', 'html'],
@@ -50,7 +47,7 @@ export const fakeProps = [
         picture: portfolio,
       },
       {
-        id: 'presentation-projet-2',
+        id: '1-JDLV-react',
         title: 'Jeu de la vie',
         alt: 'Jdlv',
         techno: ['react', 'css', 'html', 'rédux'],

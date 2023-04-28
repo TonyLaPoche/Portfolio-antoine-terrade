@@ -7,18 +7,17 @@ import Contact from '../contact';
 const Reseaux = () => {
   return (
     <section
-      id="reseaux"
+      id="contact-reseaux"
       className="h-full lg:px-10 xl:px-52  2xl:px-74 lg:py-28 py-10 flex flex-col lg:flex-row "
     >
       <div className="mx-auto  bg-gradient-to-r from-[#E6E5E3] shadow-lg lg:rounded-l-lg px-5 pt-5 pb-10 text-gray-800 w-full lg:w-8/12">
         <div className="w-full">
-          <p className="text-3xl font-bold text-center">Ou me contacter ?</p>
+          <p className="text-3xl font-bold text-center">Où me contacter ?</p>
         </div>
         <div className="w-full mb-10">
           <div className="text-3xl text-left leading-tight h-3">"</div>
           <p className="text-gray-600 text-center px-5 mb-2 whitespace-pre-line">
-            Vous me retrouverez sur bon nombre de réseaux en voici une petite
-            liste.
+            Vous pourrez me retrouver sur bon nombre de réseaux sociaux, voici une petite liste :
           </p>
           <div className="text-3xl text-right leading-tight h-3">"</div>
           <div className="container p-4  mx-auto ">
@@ -32,7 +31,7 @@ const Reseaux = () => {
                   <AiFillLinkedin className="w-10 h-10 transition-colors ease delay-50  fill-sky-500  hover:fill-slate-800" />
                 </a>
                 <p className="w-auto text-center text-sm">
-                  Job Board mais aussi lieu de rencontre.
+                  Job board mais aussi lieu d'échange entre professionnels.
                 </p>
               </li>
               <li className="gap-2 flex flex-row justify-center items-center">
@@ -44,7 +43,7 @@ const Reseaux = () => {
                   <AiFillGithub className="w-10 h-10 transition ease-in-out fill-slate-700  hover:fill-slate-900" />
                 </a>
                 <p className="w-auto  text-center text-sm">
-                  Allez fouillez dans mes projets.
+                  N'hésitez pas à explorer mes projets.
                 </p>
               </li>
               <li className="gap-2 flex flex-row justify-center items-center">
@@ -56,8 +55,7 @@ const Reseaux = () => {
                   <BsDiscord className="w-10 h-10 transition ease-in-out fill-blue-800  hover:fill-slate-800" />
                 </a>
                 <p className="w-auto text-center text-sm">
-                  Retrouver moi sur ma plateforme préféré, j'y suis connecter
-                  très souvent.
+                  Retrouvez moi sur ma plateforme préférée, j'y suis connecté très souvent.
                 </p>
               </li>
             </ul>
