@@ -12,6 +12,8 @@ const Project = () => {
   const slug = location.pathname.split('/projet/').pop();
   const data = projects.filter((proj) => proj.id === slug)[0];
 
+  console.log(slug);
+
   return (
     <div id="projects" className="container md:pt-5">
       <h2 className="center text-3xl my-3 uppercase">{data.title}</h2>

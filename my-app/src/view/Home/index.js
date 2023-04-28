@@ -9,15 +9,12 @@ import { motion, useScroll } from 'framer-motion';
 import { useEffect, useState } from 'react';
 import { HashLink } from 'react-router-hash-link';
 
-// import Banner from '../../component/banner';
 import About from '../../component/about/About';
-import Projects from '../../component/projects';
 import { BsFillArrowUpCircleFill } from 'react-icons/bs';
+import ProjectsGrid from '../../component/projects/projects';
 
-// console.log(fakeProps);
 
 const presentation = fakeProps[1].content;
-// console.log(presentation);
 
 // == Composant
 export const Home = () => {
@@ -73,7 +70,7 @@ export const Home = () => {
         <meta name="theme-color" content="#FD0054" />
       </Helmet>
       <motion.div
-        className="progress-bar"
+        className="progress-bar dark:bg-white bg-black"
         style={{ scaleX: scrollYProgress }}
       />
       <div className="w-full">
@@ -89,20 +86,25 @@ export const Home = () => {
       </div>
       <About />
 
-      <Projects />
+      {/* <Projects /> */}
+      <section
+        id="projets"
+      >
+        <ProjectsGrid />
+      </section>
 
       <Reseaux />
 
-      {scrollTop > 100 && (
+      {scrollTop > 200 && (
         <HashLink
           className="btn-floating btn-small blue darken-2 right pulse"
           style={{ bottom: 20, right: 20, position: 'fixed' }}
           smooth
-          to="/#root"
+          to="/#home"
         >
           <BsFillArrowUpCircleFill
-            size="25"
-            className=" animate-bounce text-blue-900"
+            size="55"
+            className=" animate-bounce dark:text-gray-500 text-black"
           />
         </HashLink>
       )}

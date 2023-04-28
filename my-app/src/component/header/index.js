@@ -1,12 +1,14 @@
 // == Import
 
-import Nav2 from './navTailWinf';
+// import Nav2 from './navTailWinf';
+import NavBar from './navTailWinf/navBar';
 
 // == Composant
 function Header() {
   return (
-    <header className="z-20">
-      <Nav2 />
+    <header id='home' className="z-20">
+      {/* <Nav2 /> */}
+      <NavBar />
     </header>
   );
 }

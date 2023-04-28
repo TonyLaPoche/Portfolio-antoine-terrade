@@ -43,7 +43,7 @@ const Contact = () => {
       );
   };
   return (
-    <section id="contact" className="bg-white ">
+    <section id="contact-form" className="bg-white ">
       <ToastContainer />
       <div className="py-8 lg:py-16 px-4 mx-auto max-w-screen-md">
         <h2 className="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 ">
@@ -130,9 +130,8 @@ const Contact = () => {
             onClick={() => {
               setOnSubmit((submit) => !submit);
             }}
-            className={`py-3 px-5 text-sm font-medium text-center text-white rounded-lg ${
-              isSubmit ? 'bg-green-500' : 'bg-blue-500'
-            } sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 `}
+            className={`py-3 px-5 text-sm font-medium text-center text-white rounded-lg ${isSubmit ? 'bg-green-500' : 'bg-blue-500'
+              } sm:w-fit hover:bg-primary-800 focus:ring-4 focus:outline-none focus:ring-primary-300 `}
           >
             {onSubmit && (
               <svg
