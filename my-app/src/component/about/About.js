@@ -26,13 +26,16 @@ const About = () => {
           <div className="w-full mb-10">
             <div className="text-3xl leading-tight h-3">"</div>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              Je m'appelle Antoine Terrade, j'ai 26 ans et je suis développeur web. Je suis passionné par les technologies du web, en particulier le développement front-end et back-end avec Javascript, ainsi que TypeScript que j'explore depuis peu. Ayant récemment fait une reconversion professionnelle dans le domaine du web, je suis actuellement à la recherche d'opportunités professionnelles en utilisant les technologies React et/ou Node.js.
+              Je m'appelle Antoine Terrade, j'ai 26 ans et je suis concepteur d’application. Je suis passionné par les technologies du web, en particulier par le développement front-end et back-end avec Javascript.
             </p>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              Au fil de mes formations et projets personnels, j'ai acquis une solide expérience en développement web et une forte attirance pour le développement Front-End et Back-End avec Javascript.
+              Ayant récemment fait une reconversion professionnelle dans ce domaine, je continu chaque jour à découvrir les spécificités de ce métier et les langages qu’il comprend. J’ai obtenu au fil de mes formations et projets personnels, une solide expérience en React, Redux, et Node.js. Je continu aujourd’hui à me former en Java.
             </p>
             <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
-              Vous pouvez découvrir l'ensemble de mes projets sur mon portfolio en ligne. Si mon profil vous intéresse, n'hésitez pas à me contacter.
+              Je suis actuellement à la recherche d'opportunités professionnelles utilisant les technologies précédemment citées. Vous pouvez découvrir l'ensemble de mes projets sur ce portfolio en ligne.
+            </p>
+            <p className="text-gray-600 text-justify px-5 mb-2 whitespace-pre-line">
+              Si mon profil vous intéresse, n'hésitez pas à me contacter !
             </p>
             <div className="text-3xl text-right leading-tight h-3">"</div>
             <div className="w-full">

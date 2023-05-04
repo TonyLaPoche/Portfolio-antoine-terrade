@@ -15,6 +15,7 @@ const Contact = () => {
   const sendEmail = (e) => {
     e.preventDefault();
     // console.log(e);
+    // eslint-disable-next-line
     const data = {
       name: e.target[0].value,
       firstName: e.target[1].value,
