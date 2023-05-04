@@ -9,18 +9,18 @@ const PresentationAera = ({ id, title, picture, position }) => {
         } ${position === 'right' ? 'flex-row' : 'flex-row-reverse'}`}
     >
       <div className="md:w-full p-4 md:p-none ">
-        <h1 className="text-[60px] font-bold mb-4">Développeur Web</h1>
+        <h1 className="text-[60px] font-bold mb-4">Concepteur d'application Web</h1>
         <div className="flex gap-4 justify-start">
-          <div className="p-2  border-2 border-cyan-500 bg-white text-cyan-500 rounded-full">
-            React
+          <div className="p-2  border-2 border-red-500 bg-white text-red-500 rounded-full cursor-pointer w-20 text-center">
+            JAVA
           </div>
-          <div className="p-2  border-2 border-red-500 bg-white text-red-500 text-center rounded-full">
-            Java
+          <div className="p-2  border-2 border-cyan-500 bg-white text-cyan-500 rounded-full cursor-pointer w-20 text-center">
+            REACT
           </div>
-          <div className="p-2  border-2 border-green-500 bg-white text-green-500 rounded-full">
-            Node.js
+          <div className="p-2  border-2 border-green-500 bg-white text-green-500 rounded-full cursor-pointer w-20 text-center">
+            NODE.js
           </div>
-          <div className="p-2  border-2 border-blue-500 bg-white text-blue-500 rounded-full">
+          <div className="p-2  border-2 border-blue-500 bg-white text-blue-500 rounded-full cursor-pointer w-20 text-center">
             GitHub
           </div>
         </div>

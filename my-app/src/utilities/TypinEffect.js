@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-const words = ['motivé', 'curieux', 'disponible', 'autonome', 'dévelopeur web', 'développeur front-end', 'développeur back-end', 'développeur fullstack', 'développeur junior'];
+const words = ['un dévelopeur web', 'motivé', 'développeur front-end', 'curieux', 'développeur back-end', 'autonome', 'développeur fullstack', 'disponible'];
 
 const TypeWriter = () => {
     const [text, setText] = useState('');

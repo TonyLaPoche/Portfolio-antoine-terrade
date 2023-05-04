@@ -11,7 +11,7 @@ const ProjectsGrid = () => {
 
     return (
         <>
-            <h4 className="text-center text-4xl mb-5 underline">Mes projets</h4>
+            <h2 className="text-center text-6xl mb-12">Mes projets</h2>
 
             <div className="flex flex-row justify-center flex-wrap  border-gray-200 rounded-lg shadow-sm dark:border-gray-100 gap-4 ">
                 {

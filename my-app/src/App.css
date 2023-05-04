@@ -4,6 +4,7 @@
 
 html {
   scroll-behavior: smooth;
+  font-family: "Roboto Flex", sans-serif;
 }
 
 body {
@@ -21,5 +22,3 @@ body {
   top: 0;
   right: 0;
 }
-
-
