@@ -64,7 +64,7 @@ export const fakeProps = [
         id: '2-Connect4',
         title: 'Puissance 4 local',
         alt: 'Puissance 4',
-        techno: ['angular', 'scss', 'html', 'tailwinds'],
+        techno: ['angular', 'scss', 'html', 'tailwindcss'],
         link: 'https://github.com/TonyLaPoche/Puissance-4-Angular',
         demo: 'https://connect4app-2e98c.web.app',
         etat: 'opérationnel',

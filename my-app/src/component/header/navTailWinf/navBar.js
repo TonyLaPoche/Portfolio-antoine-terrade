@@ -15,7 +15,9 @@ const NavBar = () => {
                     smooth
 
                     className="flex items-center">
-                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Antoine Terrade</span>
+                    <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+                        Antoine Terrade
+                    </span>
                 </HashLink>
                 <div className="flex md:order-2">
                     <a

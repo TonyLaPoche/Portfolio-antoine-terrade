@@ -1,8 +1,10 @@
+import Badge from "../badge";
+
 const Project = ({ title, description, link, alt, techno, demo, etat, picture }) => {
     return (
         <>
             <div
-                className="flex bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:border-gray-100 "
+                className="flex bg-white border border-gray-200 rounded-lg shadow  md:max-w-xl hover:border-gray-100"
             >
 
                 <div className="flex flex-col justify-between p-4 leading-normal">
@@ -21,16 +23,11 @@ const Project = ({ title, description, link, alt, techno, demo, etat, picture })
 
                     <img className="object-cover w-full rounded-lg h-86  md:h-auto md:w-2/3 md:mx-auto md:rounded-lg border border-gray-400" src={picture} alt={alt} />
 
-                    <h6 className="mt-4 text-center text-2xl text-gray-900">Techno</h6>
-                    <div className="flex items-center justify-evenly my-4">
-                        {techno.map((techno, index) => {
-                            return (
-                                <p className="mb-3 text-gray-800 text-sm font-bold uppercase" key={index}>
-                                    {techno} <br />
-                                </p>
-                            )
+                    {/* <h6 className="mt-4 text-center text-2xl text-gray-900">Techno</h6> */}
+                    <div className="flex flex-wrap items-center justify-center gap-2 my-4">
+                        {
+                            techno.map((tech, index) => <Badge key={index + tech} techno={tech} />)
                         }
-                        )}
                     </div>
 
                     <div className="flex items-center justify-evenly mb-4">
@@ -41,7 +38,7 @@ const Project = ({ title, description, link, alt, techno, demo, etat, picture })
                                 href={demo}
                                 target="_blank"
                                 rel="noreferrer"
-                                className="text-white dark:text-black bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:hover:bg-gray-100 dark:focus:ring-gray-400 dark:border-gray-300"
+                                className="text-white uppercase bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-bold rounded-lg text-sm px-3 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                             >
                                 Démo
                             </a>
@@ -51,7 +48,7 @@ const Project = ({ title, description, link, alt, techno, demo, etat, picture })
                             href={link}
                             target="_blank" rel="noreferrer"
                             type="button"
-                            className="text-white dark:text-black bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-gray-300 dark:hover:bg-gray-100 dark:focus:ring-gray-400 dark:border-gray-300"
+                            className="text-white uppercase font-bold bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 rounded-lg text-sm px-3 py-2 text-center mr-3 md:mr-0 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                         >
                             Repos
                         </a>
