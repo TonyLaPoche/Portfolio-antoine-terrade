@@ -56,17 +56,15 @@ const Nav2 = () => {
       </div>
       <div
         id="sidenav-overlay"
-        className={`${
-          asideNav ? 'block' : 'hidden'
-        } bg-black opacity-50 h-screen w-screen fixed`}
+        className={`${asideNav ? 'block' : 'hidden'
+          } bg-black opacity-50 h-screen w-screen fixed`}
         style={{ zIndex: '1' }}
         onClick={() => setAsideNav((s) => !s)}
       />
 
       <aside
-        className={`fixed top-0 h-screen w-[80vw] md:w-[40vw] lg:w-[30vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${
-          asideNav ? 'translate-x-0' : '-translate-x-full'
-        } ${asideNav ? '' : 'pointer-events-none'}
+        className={`fixed top-0 h-screen w-[80vw] md:w-[40vw] lg:w-[30vw] bg-slate-200 left-0 transition-transform  duration-500 transform ${asideNav ? 'translate-x-0' : '-translate-x-full'
+          } ${asideNav ? '' : 'pointer-events-none'}
         `}
         style={{
           zIndex: '991',
